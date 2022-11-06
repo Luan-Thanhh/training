@@ -1,0 +1,606 @@
+.homepage {
+  // Header
+  &__header {
+    height: $heightHeader;
+    background-color: $darkBg;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+  }
+
+  &__navbar {
+    @include dFlexCenter(space-between, center, 32px);
+
+    padding: 0 80px;
+    height: 100%;
+  }
+
+  &__menu {
+    @include dFlexCenter(flex-end, center, 24px);
+
+    flex: 1;
+  }
+
+  &__menu-item {
+    @include textBody1;
+
+    text-decoration: none;
+    color: $whiteColor;
+  }
+
+  &__nav-btn {
+    @include buttonPrimary($whiteColor);
+  }
+
+  // Startup
+  &__startup {
+    margin-top: $heightHeader;
+    height: 720px;
+    background: center / cover no-repeat url("../img/man.png");
+    background-attachment: fixed;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(
+        30.56% 76.04% at 74.58% 0%,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.6) 100%
+      );
+      background-attachment: fixed;
+    }
+
+    &--sub-heading {
+      @include textCap($whiteColor, 500);
+
+      span {
+        @include textCap($whiteColor, 900);
+      }
+    }
+
+    &--heading {
+      @include headingDisplay($whiteColor);
+
+      padding: 24px 0;
+      max-width: 803px;
+      width: 100%;
+    }
+
+    &--text {
+      @include textBody1($whiteColor);
+
+      padding: 16px 0 48px 0;
+      max-width: 600px;
+      width: 100%;
+    }
+  }
+
+  &__startup-content {
+    padding: 0 80px;
+    position: relative;
+    top: 128px;
+    z-index: 1;
+  }
+
+  &__startup-author {
+    @include textBody1($whiteColor);
+
+    span {
+      color: $yellowBg;
+    }
+  }
+
+  &__startup-btn {
+    @include buttonPrimary;
+  }
+
+  // Main
+  &__main {
+    padding: 130px 80px;
+  }
+
+  // Post
+  &__post {
+    display: flex;
+    position: relative;
+
+    &--heading {
+      @include heading2;
+
+      padding-bottom: 32px;
+    }
+
+    &--title {
+      @include heading3;
+    }
+
+    &--text {
+      @include textBody1;
+
+      margin-right: 118px;
+      padding: 16px 0 32px 0;
+      text-align: justify;
+    }
+  }
+
+  &__post-feature {
+    max-width: 733px;
+    width: 100%;
+  }
+
+  &__post-info {
+    margin-right: 32px;
+    padding: 32px;
+    border: 1px solid $mediumGreyColor;
+  }
+
+  &__post-img {
+    max-width: 733px;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__post-author {
+    @include textLabel;
+
+    padding: 32px 0 16px 0;
+    span {
+      color: $purple;
+    }
+  }
+
+  &__post-read-btn {
+    @include buttonPrimary;
+  }
+
+  &__post-all {
+  }
+
+  &__post-list {
+    list-style: none;
+  }
+
+  &__post-list &__post--title {
+    @include heading4;
+  }
+
+  &__post-item {
+    padding: 0 225.72px 25px 32px;
+    transition: 0.35s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $lightYellowColor;
+    }
+  }
+
+  &__post-view-btn {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    text-decoration: none;
+    color: $purple;
+  }
+
+  // Introduce
+  &__introduce {
+    display: flex;
+    margin-top: 151px;
+    padding: 96px 80px;
+    background-color: $lavenderColor;
+    position: relative;
+
+    &--title {
+      @include textCap;
+    }
+
+    &--text {
+      @include textBody1;
+
+      margin-right: 45px;
+    }
+
+    &::after {
+      position: absolute;
+      top: -23px;
+      right: 0;
+      content: "";
+      max-width: 285px;
+      width: 100%;
+      height: 23px;
+      background-color: $purple;
+    }
+
+    &::before {
+      position: absolute;
+      top: -23px;
+      right: 195px;
+      content: "";
+      max-width: 925px;
+      width: 100%;
+      height: 23px;
+      background-color: $yellowBg;
+    }
+  }
+
+  &__about,
+  &__mission {
+    flex: 1;
+  }
+
+  &__about {
+    margin-right: 82px;
+  }
+
+  &__about &__introduce--heading {
+    @include heading2;
+
+    margin-right: 66px;
+    padding: 24px 0 16px 0;
+  }
+
+  &__about-btn {
+    padding-top: 17px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+    color: $purple;
+    text-decoration: none;
+  }
+
+  &__mission &__introduce--heading {
+    @include heading3;
+
+    margin-right: 67px;
+    padding: 24px 0 16px 0;
+  }
+
+  // Category
+  &__category {
+    @include dFlexCenter(space-between, center, 32px);
+
+    &--title {
+      @include heading3;
+
+      padding: 16px 0 4px 0;
+    }
+
+    &--heading {
+      @include heading3;
+
+      padding: 128px 0 48px 0;
+      text-align: center;
+    }
+  }
+
+  &__category-item {
+    padding: 32px;
+    border: 1px solid $mediumGreyColor;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+      background-color: $yellowBg;
+    }
+  }
+
+  &__category-icon {
+    width: 47px;
+    height: 47px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      background-color: $lightYellowColor;
+      padding: 12px;
+      border-radius: 10px;
+    }
+  }
+
+  // Special post
+  &__special {
+    margin-top: 128px;
+    position: relative;
+
+    img {
+      width: 100%;
+      max-width: 949px;
+    }
+
+    &--sub-heading {
+      @include textCap;
+    }
+
+    &--heading {
+      @include heading1;
+
+      padding: 24px 0 16px 0;
+    }
+
+    &--text {
+      @include textBody1;
+    }
+  }
+
+  &__special-content {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-width: 706px;
+    width: 100%;
+    padding: 80px;
+    background-color: $whiteColor;
+  }
+
+  &__special-btn {
+    @include buttonPrimary;
+
+    margin-top: 32px;
+  }
+
+  // Authors
+  &__authors {
+    @include dFlexCenter(space-between, $gap: 32px);
+
+    &--heading {
+      @include heading2;
+
+      padding: 128px 0 48px;
+      text-align: center;
+    }
+  }
+
+  &__author-item {
+    width: 100%;
+    padding: 40px 0;
+    text-align: center;
+
+    &:first-child {
+      background-color: $lightGreyColor;
+    }
+
+    &:nth-child(2) {
+      background-color: $lightYellowColor;
+    }
+
+    &:nth-child(3),
+    &:last-child {
+      background-color: $lightGreyColor;
+    }
+  }
+
+  &__author-avatar {
+    // padding: 0 84px;
+  }
+
+  &__author-name {
+    @include heading3;
+
+    padding-top: 20px;
+  }
+
+  &__author-job {
+    @include textBody2;
+
+    padding-bottom: 20px;
+  }
+
+  &__social-icons {
+    @include dFlexCenter($gap: 16px);
+
+    list-style: none;
+  }
+
+  &__social-item {
+  }
+
+  &__social-link {
+    color: $darkBg;
+    text-decoration: none;
+  }
+
+  // Featured
+  &__logo {
+    @include dFlexCenter(space-between);
+
+    margin: 96px 0;
+
+    &--sub-heading {
+      @include textBody2;
+    }
+
+    &--heading {
+      @include heading4($mediumGreyColor);
+    }
+  }
+
+  &__logo-img {
+    img {
+      color: #ccc;
+    }
+  }
+
+  // Testimonial
+  &__testimonial {
+    padding: 80px 112px;
+    background-color: $lightYellowColor;
+
+    display: flex;
+
+    &--sub-heading {
+      @include textCap;
+    }
+
+    &--heading {
+      @include heading2;
+
+      padding: 12px 24px 16px 0;
+    }
+
+    &--text {
+      @include textBody1;
+    }
+  }
+
+  &__testimonial-header {
+    padding-right: 80px;
+    border-right: 1px solid $mediumGreyColor;
+    flex: 1;
+  }
+
+  &__testimonial-content {
+    padding-left: 80px;
+    position: relative;
+    flex: 2;
+  }
+
+  &__testimonial-message {
+    @include heading4;
+
+    padding-right: 190px;
+  }
+
+  &__testimonial-profile {
+    @include dFlexCenter(flex-start);
+
+    margin-top: 121px;
+  }
+
+  &__testimonial-avatar {
+    padding-right: 16px;
+  }
+
+  &__testimonial-name {
+    @include heading4;
+  }
+
+  &__testimonial-address {
+    @include textBody1;
+  }
+
+  &__testimonial-control {
+    display: flex;
+    gap: 24px;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__testimonial-btn {
+    @include dFlexCenter;
+
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background-color: $whiteColor;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $darkBg;
+      transform: scale(1.2);
+
+      img {
+        filter: invert(195%) sepia(176%) saturate(6849%) hue-rotate(-55deg)
+          brightness(202%) contrast(250%);
+      }
+    }
+
+    &:active {
+      transform: scale(1);
+    }
+  }
+
+  // Join
+  &__join {
+    margin: 0 auto;
+    padding: 128px 0;
+    max-width: 414px;
+    width: 100%;
+    text-align: center;
+
+    &--heading {
+      @include heading2;
+    }
+
+    &--text {
+      @include textBody1;
+
+      padding: 16px 0 32px 0;
+    }
+  }
+
+  &__join-btn {
+    @include buttonPrimary;
+  }
+
+  // Footer
+  &__footer {
+    padding: 59px 80px;
+    background-color: $darkBg;
+  }
+
+  &__footer &__navbar {
+    padding: 0;
+  }
+
+  &__footer-form {
+    display: flex;
+    justify-content: space-between;
+    margin: 57px 0 48px 0;
+    padding: 80px 64px;
+    background-color: rgba($whiteColor, 0.05);
+    width: 100%;
+  }
+
+  &__footer-message {
+    @include heading2($whiteColor);
+  }
+
+  &__footer-message,
+  &__form-group {
+    flex: 1;
+  }
+  &__form-group {
+    text-align: right;
+  }
+
+  &__form-control {
+    @include textBody1;
+
+    padding: 13px 25px;
+    border: 1px solid $mediumGreyColor;
+    background-color: transparent;
+    outline: none;
+    max-width: 323px;
+    width: 100%;
+  }
+
+  &__form-submit {
+    @include buttonPrimary;
+  }
+
+  &__footer-contact {
+    @include dFlexCenter(space-between);
+  }
+
+  &__footer-social &__social-icons {
+    gap: 30px;
+  }
+  &__footer-address {
+    @include textBody1($whiteColor);
+  }
+}

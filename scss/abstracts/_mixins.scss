@@ -1,0 +1,125 @@
+@mixin headingDisplay($color: $darkBg) {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 64px;
+  color: $color;
+  letter-spacing: -2px;
+}
+
+@mixin heading1($color: $darkBg) {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+  color: $color;
+  letter-spacing: -2px;
+}
+
+@mixin heading2($color: $darkBg) {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: $color;
+  letter-spacing: -2px;
+}
+
+@mixin heading3($color: $darkBg) {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 40px;
+  color: $color;
+  letter-spacing: -1px;
+}
+
+@mixin heading4($color: $darkBg) {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: $color;
+}
+
+@mixin heading5($color: $darkBg) {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+  color: $color;
+}
+
+@mixin heading6($color: $darkBg) {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color;
+}
+
+@mixin textBody1($color: $mediumGreyColor) {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: $color;
+}
+
+@mixin textBody2($color: $mediumGreyColor) {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color;
+}
+
+@mixin textLabel($color: $darkBg) {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color;
+}
+
+@mixin textCap($color: $darkBg, $bold: 600) {
+  font-family: "Inter", sans-serif;
+  font-weight: $bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+@mixin buttonPrimary($color: $yellowBg) {
+  padding: 16px 48px;
+  border: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  background-color: $color;
+  color: $darkBg;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s;
+
+  @if $color == $yellowBg {
+    &:hover {
+      background-color: #edc14a;
+    }
+  }
+
+  @if $color == $whiteColor {
+    &:hover {
+      background-color: #e9e3e3;
+    }
+  }
+}
+
+@mixin dFlexCenter($just: center, $align: center, $gap: 0) {
+  display: flex;
+  justify-content: $just;
+  align-items: $align;
+  gap: $gap;
+  // flex-wrap: wrap;
+}
+
+@mixin container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
