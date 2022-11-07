@@ -33,6 +33,13 @@ body {
   color: #232536;
   letter-spacing: -1px;
 }
+.category--text {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6d6e76;
+}
 .category__list {
   display: flex;
   justify-content: space-between;
