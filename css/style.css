@@ -194,6 +194,9 @@ body {
 .join__btn:hover {
   background-color: #edc14a;
 }
+.join__btn:active {
+  background-color: #ffd050;
+}
 
 .navbar {
   display: flex;
@@ -214,6 +217,7 @@ body {
   justify-content: flex-end;
   align-items: center;
   gap: 24px;
+  text-transform: capitalize;
   flex: 1;
 }
 .navbar__menu-item {
@@ -241,6 +245,9 @@ body {
 .navbar__btn:hover {
   background-color: #e9e3e3;
 }
+.navbar__btn:active {
+  background-color: #ffffff;
+}
 
 .footer {
   padding: 59px 80px;
@@ -249,6 +256,7 @@ body {
 .footer__navbar {
   padding: 0;
   position: relative;
+  z-index: 1;
 }
 .footer__form {
   display: flex;
@@ -299,6 +307,9 @@ body {
 }
 .footer__form-submit:hover {
   background-color: #edc14a;
+}
+.footer__form-submit:active {
+  background-color: #ffd050;
 }
 .footer__contact {
   display: flex;
@@ -405,6 +416,9 @@ body {
 .homepage__header-btn:hover {
   background-color: #edc14a;
 }
+.homepage__header-btn:active {
+  background-color: #ffd050;
+}
 .homepage__main {
   padding: 130px 80px;
 }
@@ -480,6 +494,9 @@ body {
 }
 .homepage__post-read-btn:hover {
   background-color: #edc14a;
+}
+.homepage__post-read-btn:active {
+  background-color: #ffd050;
 }
 .homepage__post-list {
   list-style: none;
@@ -644,6 +661,9 @@ body {
 }
 .homepage__special-btn:hover {
   background-color: #edc14a;
+}
+.homepage__special-btn:active {
+  background-color: #ffd050;
 }
 .homepage__author {
   padding-top: 128px;
@@ -839,6 +859,9 @@ body {
 }
 .blogpage__feature-btn:hover {
   background-color: #edc14a;
+}
+.blogpage__feature-btn:active {
+  background-color: #ffd050;
 }
 .blogpage__post {
   padding: 64px 133px 89px 0;
@@ -1601,6 +1624,9 @@ body {
 }
 .contactpage__form-btn:hover {
   background-color: #edc14a;
+}
+.contactpage__form-btn:active {
+  background-color: #ffd050;
 }
 
 .policypage--heading {

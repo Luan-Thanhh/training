@@ -102,11 +102,19 @@
     &:hover {
       background-color: #edc14a;
     }
+
+    &:active {
+      background-color: $yellowBg;
+    }
   }
 
   @if $color == $whiteColor {
     &:hover {
       background-color: #e9e3e3;
+    }
+
+    &:active {
+      background-color: $whiteColor;
     }
   }
 }

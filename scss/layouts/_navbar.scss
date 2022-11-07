@@ -14,6 +14,7 @@
   &__menu {
     @include dFlexCenter(flex-end, center, 24px);
 
+    text-transform: capitalize;
     flex: 1;
   }
 
