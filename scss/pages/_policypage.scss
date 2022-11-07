@@ -1,0 +1,32 @@
+.policypage {
+  &--heading {
+    @include heading1;
+
+    padding-bottom: 24px;
+  }
+
+  &--sub-heading {
+    @include heading2;
+
+    padding: 24px 0;
+  }
+
+  &--text {
+    @include textBody1;
+  }
+
+  &__header {
+    margin-top: $heightHeader;
+    padding: 80px 596px;
+    background-color: $lavenderColor;
+    text-align: center;
+
+    .policypage--heading {
+      padding-bottom: 0;
+    }
+  }
+
+  &__main {
+    padding: 128px 336px;
+  }
+}

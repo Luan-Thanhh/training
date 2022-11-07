@@ -1,0 +1,156 @@
+.aboutpage {
+  &__header {
+    @include dFlexCenter;
+
+    margin-top: $heightHeader;
+    padding: 80px 118px 0 189px;
+
+    &--title {
+      @include textCap(500);
+    }
+
+    &--heading {
+      @include heading1;
+
+      padding-top: 16px;
+    }
+
+    &--text {
+      @include textBody1;
+
+      padding: 0 32px;
+      flex: 1;
+    }
+  }
+
+  &__header-desc {
+    padding: 64px;
+    background-color: $whiteColor;
+    flex: 1;
+  }
+
+  // Main
+  &__main {
+    padding: 0 80px;
+  }
+
+  // Overview
+  &__overview {
+    position: relative;
+    top: -64px;
+    z-index: -1;
+
+    &--title {
+      @include textCap;
+    }
+
+    &--heading {
+      @include heading3;
+
+      padding: 24px 108px 16px 0;
+    }
+
+    &--text {
+      @include textBody1;
+    }
+  }
+
+  &__overview-img {
+    width: 100%;
+    height: 444px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__overview-content {
+    @include dFlexCenter(space-between, flex-start, 32px);
+
+    padding: 128px 108px 64px;
+    background-color: $lavenderColor;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: -23px;
+      content: "";
+      width: 311px;
+      height: 23px;
+      background-color: $purple;
+    }
+
+    &::after {
+      position: absolute;
+      top: -23px;
+      left: 331px;
+      content: "";
+      width: 550px;
+      height: 23px;
+      background-color: $yellowBg;
+    }
+  }
+
+  &__overview-mision {
+  }
+
+  &__overview-vision {
+  }
+
+  &__overview-quantity {
+    @include dFlexCenter(space-between, $gap: 68px);
+
+    padding: 32px 48px;
+    background-color: $yellowBg;
+    position: absolute;
+    top: -179px;
+
+    &--heading {
+      @include headingDisplay;
+    }
+
+    &--text {
+      @include textBody1;
+    }
+  }
+
+  // Information
+  &__information {
+    margin-top: -64px;
+    padding: 128px 0;
+
+    &--heading {
+      @include heading2;
+    }
+
+    &--sub-heading {
+      @include heading4;
+
+      padding: 16px 0;
+      padding-right: 52px;
+    }
+
+    &--text {
+      @include textBody1;
+    }
+  }
+
+  &__information-item {
+    @include dFlexCenter(space-between, $gap: 137px 127px);
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__information-content {
+  }
+
+  // Join
+  &__join {
+    margin: 128px 0;
+  }
+}

@@ -75,6 +75,10 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 32px;
+  margin-bottom: 32px;
+}
+.author__list:last-child {
+  margin-bottom: 0;
 }
 .author__item {
   width: 100%;
@@ -1033,6 +1037,176 @@ body {
   color: #592ea9;
 }
 
+.aboutpage__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  margin-top: 80px;
+  padding: 80px 118px 0 189px;
+}
+.aboutpage__header--title {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.aboutpage__header--heading {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+  color: #232536;
+  letter-spacing: -2px;
+  padding-top: 16px;
+}
+.aboutpage__header--text {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #6d6e76;
+  padding: 0 32px;
+  flex: 1;
+}
+.aboutpage__header-desc {
+  padding: 64px;
+  background-color: #ffffff;
+  flex: 1;
+}
+.aboutpage__main {
+  padding: 0 80px;
+}
+.aboutpage__overview {
+  position: relative;
+  top: -64px;
+  z-index: -1;
+}
+.aboutpage__overview--title {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #232536;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.aboutpage__overview--heading {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 40px;
+  color: #232536;
+  letter-spacing: -1px;
+  padding: 24px 108px 16px 0;
+}
+.aboutpage__overview--text {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #6d6e76;
+}
+.aboutpage__overview-img {
+  width: 100%;
+  height: 444px;
+}
+.aboutpage__overview-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.aboutpage__overview-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 128px 108px 64px;
+  background-color: #f4f0f8;
+  position: relative;
+}
+.aboutpage__overview-content::before {
+  position: absolute;
+  top: -23px;
+  content: "";
+  width: 311px;
+  height: 23px;
+  background-color: #592ea9;
+}
+.aboutpage__overview-content::after {
+  position: absolute;
+  top: -23px;
+  left: 331px;
+  content: "";
+  width: 550px;
+  height: 23px;
+  background-color: #ffd050;
+}
+.aboutpage__overview-quantity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 68px;
+  padding: 32px 48px;
+  background-color: #ffd050;
+  position: absolute;
+  top: -179px;
+}
+.aboutpage__overview-quantity--heading {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 64px;
+  color: #232536;
+  letter-spacing: -2px;
+}
+.aboutpage__overview-quantity--text {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #6d6e76;
+}
+.aboutpage__information {
+  margin-top: -64px;
+  padding: 128px 0;
+}
+.aboutpage__information--heading {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: #232536;
+  letter-spacing: -2px;
+}
+.aboutpage__information--sub-heading {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #232536;
+  padding: 16px 0;
+  padding-right: 52px;
+}
+.aboutpage__information--text {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #6d6e76;
+}
+.aboutpage__information-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 137px 127px;
+}
+.aboutpage__information-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.aboutpage__join {
+  margin: 128px 0;
+}
+
 .categorypage__header {
   margin-top: 80px;
   padding: 80px 463px;
@@ -1203,6 +1377,235 @@ body {
   font-weight: 700;
   font-size: 14px;
   line-height: 32px;
+}
+
+.authorpage__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  margin-top: 80px;
+  padding: 128px 208px;
+  background-color: #f4f0f8;
+  position: relative;
+}
+.authorpage__header--heading {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+  color: #232536;
+  letter-spacing: -2px;
+}
+.authorpage__header--text {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #6d6e76;
+  padding: 24px 0;
+}
+.authorpage__header::before {
+  position: absolute;
+  bottom: 0;
+  left: 208px;
+  content: "";
+  width: 60%;
+  height: 23px;
+  background-color: #ffd050;
+}
+.authorpage__header::after {
+  position: absolute;
+  right: 208px;
+  bottom: 0;
+  content: "";
+  width: 20%;
+  height: 23px;
+  background-color: #592ea9;
+}
+.authorpage__header-social a {
+  text-decoration: none;
+  padding-right: 16px;
+}
+.authorpage__main {
+  padding: 128px 208px;
+}
+.authorpage__post--heading {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+  color: #232536;
+  letter-spacing: -2px;
+}
+.authorpage__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  padding-top: 64px;
+}
+.authorpage__item--title {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #592ea9;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.authorpage__item--heading {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: #232536;
+  letter-spacing: -2px;
+  padding: 20px 0 16px 0;
+}
+.authorpage__item--text {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #6d6e76;
+}
+.contactpage__main {
+  padding: 128px 336px;
+}
+.contactpage__content {
+  text-align: center;
+}
+.contactpage__content--title {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 20px;
+  color: #232536;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.contactpage__content--heading {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+  color: #232536;
+  letter-spacing: -2px;
+  padding: 12px 0 24px 0;
+}
+.contactpage__content--text {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #6d6e76;
+}
+.contactpage__information {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 42px;
+  margin: 64px 0 32px 0;
+  padding: 48px 64px;
+  background-color: #592ea9;
+}
+.contactpage__information--title {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ffffff;
+  opacity: 0.6;
+}
+.contactpage__information--heading {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+  color: #ffffff;
+  padding-top: 16px;
+}
+.contactpage__information--text {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  opacity: 0.6;
+}
+.contactpage__information-working {
+  flex: 1;
+}
+.contactpage__information-contact {
+  flex: 1;
+}
+.contactpage__form-group {
+  padding-bottom: 16px;
+}
+.contactpage__form-group textarea {
+  resize: vertical;
+}
+.contactpage__form-control {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #6d6e76;
+  width: 100%;
+  padding: 24px;
+  border: 1px solid #6d6e76;
+  background-color: transparent;
+}
+.contactpage__form-btn {
+  padding: 16px 48px;
+  border: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  background-color: #ffd050;
+  color: #232536;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s;
+  width: 100%;
+}
+.contactpage__form-btn:hover {
+  background-color: #edc14a;
+}
+
+.policypage--heading {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+  color: #232536;
+  letter-spacing: -2px;
+  padding-bottom: 24px;
+}
+.policypage--sub-heading {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: #232536;
+  letter-spacing: -2px;
+  padding: 24px 0;
+}
+.policypage--text {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #6d6e76;
+}
+.policypage__header {
+  margin-top: 80px;
+  padding: 80px 596px;
+  background-color: #f4f0f8;
+  text-align: center;
+}
+.policypage__header .policypage--heading {
+  padding-bottom: 0;
+}
+.policypage__main {
+  padding: 128px 336px;
 }
 
 /*# sourceMappingURL=style.css.map */

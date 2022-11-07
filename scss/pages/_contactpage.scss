@@ -1,0 +1,85 @@
+.contactpage {
+  &__main {
+    padding: 128px 336px;
+  }
+
+  &__content {
+    text-align: center;
+
+    &--title {
+      @include textCap($bold: 900);
+    }
+
+    &--heading {
+      @include heading1;
+
+      padding: 12px 0 24px 0;
+    }
+
+    &--text {
+      @include textBody1;
+    }
+  }
+
+  &__information {
+    @include dFlexCenter(space-between, flex-start, 42px);
+
+    margin: 64px 0 32px 0;
+    padding: 48px 64px;
+    background-color: $purple;
+
+    &--title {
+      @include textBody2($whiteColor);
+
+      padding-bottom: 16px;
+      border-bottom: 1px solid $whiteColor;
+      opacity: 0.6;
+    }
+
+    &--heading {
+      @include heading5($whiteColor);
+
+      padding-top: 16px;
+    }
+
+    &--text {
+      @include textBody2($whiteColor);
+
+      opacity: 0.6;
+    }
+  }
+
+  &__information-working {
+    flex: 1;
+  }
+
+  &__information-contact {
+    flex: 1;
+  }
+
+  &__form {
+  }
+
+  &__form-group {
+    padding-bottom: 16px;
+
+    textarea {
+      resize: vertical;
+    }
+  }
+
+  &__form-control {
+    @include textBody1;
+
+    width: 100%;
+    padding: 24px;
+    border: 1px solid $mediumGreyColor;
+    background-color: transparent;
+  }
+
+  &__form-btn {
+    @include buttonPrimary;
+
+    width: 100%;
+  }
+}

@@ -1,0 +1,94 @@
+.authorpage {
+  &__header {
+    @include dFlexCenter(space-between, $gap: 32px);
+
+    margin-top: $heightHeader;
+    padding: 128px 208px;
+    background-color: $lavenderColor;
+    position: relative;
+
+    &--heading {
+      @include heading1;
+    }
+
+    &--text {
+      @include textBody1;
+
+      padding: 24px 0;
+    }
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 208px;
+      content: "";
+      width: 60%;
+      height: 23px;
+      background-color: $yellowBg;
+    }
+
+    &::after {
+      position: absolute;
+      right: 208px;
+      bottom: 0;
+      content: "";
+      width: 20%;
+      height: 23px;
+      background-color: $purple;
+    }
+  }
+
+  &__header-avatar {
+  }
+
+  &__header-content {
+  }
+
+  &__header-social {
+    a {
+      text-decoration: none;
+      padding-right: 16px;
+    }
+  }
+
+  // Main
+  &__main {
+    padding: 128px 208px;
+  }
+
+  // Post
+  &__post {
+    &--heading {
+      @include heading1;
+    }
+  }
+
+  &__list {
+  }
+
+  &__item {
+    @include dFlexCenter(space-between, $gap: 32px);
+
+    padding-top: 64px;
+
+    &--title {
+      @include textCap($purple);
+    }
+
+    &--heading {
+      @include heading2;
+
+      padding: 20px 0 16px 0;
+    }
+
+    &--text {
+      @include textBody1;
+    }
+  }
+
+  &__item-img {
+  }
+
+  &__item-content {
+  }
+}

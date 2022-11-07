@@ -9,6 +9,12 @@
 
   &__list {
     @include dFlexCenter(space-between, $gap: 32px);
+
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__item {
