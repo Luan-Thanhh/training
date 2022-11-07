@@ -15,3 +15,25 @@ body {
   font-family: "Sen", sans-serif;
   color: $darkBg;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba($darkBg, 0.5);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba($mediumGreyColor, 0.5);
+}
+
+::selection {
+  color: $whiteColor;
+  background: $yellowBg;
+}

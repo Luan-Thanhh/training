@@ -96,11 +96,12 @@
       transition: 0.3s;
 
       &:hover {
-        @include heading3;
+        color: $darkBg;
+        transform: scale(1.2);
       }
 
       &:active {
-        @include heading4;
+        transform: scale(1);
       }
     }
   }
