@@ -354,7 +354,11 @@
   }
 
   &__testimonial-name {
-    @include heading4;
+    a {
+      @include heading4;
+
+      text-decoration: none;
+    }
   }
 
   &__testimonial-address {

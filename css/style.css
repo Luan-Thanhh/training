@@ -127,12 +127,15 @@ body {
   background-color: #f4f4f4;
 }
 .author__name {
+  padding-top: 20px;
+}
+.author__name a {
   font-weight: 700;
   font-size: 28px;
   line-height: 40px;
   color: #232536;
   letter-spacing: -1px;
-  padding-top: 20px;
+  text-decoration: none;
 }
 .author__job {
   font-family: "Inter", sans-serif;
@@ -724,11 +727,12 @@ body {
 .homepage__testimonial-avatar {
   padding-right: 16px;
 }
-.homepage__testimonial-name {
+.homepage__testimonial-name a {
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
   color: #232536;
+  text-decoration: none;
 }
 .homepage__testimonial-address {
   font-family: "Inter", sans-serif;
@@ -1393,11 +1397,12 @@ body {
 }
 .categorypage__tag-item {
   margin-bottom: 16px;
-  padding: 8px 38px;
   border: 1px solid #6d6e76;
   border-radius: 100px;
 }
 .categorypage__tag-link {
+  display: inline-block;
+  padding: 8px 38px;
   color: #6d6e76;
   text-decoration: none;
   font-weight: 700;

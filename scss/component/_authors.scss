@@ -41,9 +41,13 @@
   }
 
   &__name {
-    @include heading3;
-
     padding-top: 20px;
+
+    a {
+      @include heading3;
+
+      text-decoration: none;
+    }
   }
 
   &__job {
