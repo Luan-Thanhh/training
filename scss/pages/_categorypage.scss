@@ -1,0 +1,170 @@
+.categorypage {
+  // Header
+  &__header {
+    margin-top: $heightHeader;
+    padding: 80px 463px;
+    background-color: $lavenderColor;
+    text-align: center;
+
+    &--heading {
+      @include headingDisplay;
+    }
+
+    &--text {
+      @include textBody1;
+
+      padding: 16px 0 32px 0;
+    }
+  }
+
+  &__header-breadcrumb {
+    li {
+      @include textCap(500);
+
+      display: inline;
+    }
+
+    li + li:before {
+      padding: 4px;
+      content: ">";
+    }
+
+    li a {
+      color: $darkBg;
+      text-decoration: none;
+    }
+  }
+
+  // Main
+  &__main {
+    @include dFlexCenter(space-between, flex-start, 144px);
+
+    padding: 128px 80px;
+  }
+
+  // List
+  &__list {
+    &--heading {
+    }
+  }
+
+  &__item {
+    @include dFlexCenter(space-between);
+
+    padding-bottom: 32px;
+    cursor: pointer;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    &--title {
+      @include textCap($purple);
+    }
+
+    &--heading {
+      @include heading2;
+
+      padding: 20px 0 16px 0;
+    }
+
+    &--text {
+      @include textBody1;
+    }
+  }
+
+  &__item-img {
+    padding-right: 32px;
+    max-width: 294px;
+    width: 100%;
+    height: 312px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__item-content {
+  }
+
+  // Sidebar
+  &__sidebar {
+    width: $widthSidebar;
+
+    &--heading {
+      @include heading2;
+    }
+  }
+
+  // Cards
+  &__card-list {
+    padding-top: 40px;
+    width: $widthSidebar;
+    list-style: none;
+  }
+
+  &__card-item {
+    margin-bottom: 24px;
+    padding: 24px;
+    border: 1px solid $mediumGreyColor;
+    transition: 0.5s;
+
+    &:last-child {
+      margin-bottom: 48px;
+    }
+
+    &:hover {
+      border-color: transparent;
+      background-color: $yellowBg;
+    }
+  }
+
+  &__card-link {
+    @include dFlexCenter(flex-start, $gap: 16px);
+
+    text-decoration: none;
+  }
+
+  &__card-icon {
+    background-color: $lightYellowColor;
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  &__card-name {
+    @include heading3;
+  }
+
+  // Tags
+  &__tag {
+    width: 100%;
+
+    &--heading {
+      @include heading2;
+    }
+  }
+
+  &__tag-list {
+    padding-top: 32px;
+    list-style: none;
+    @include dFlexCenter(space-between);
+    flex-wrap: wrap;
+  }
+
+  &__tag-item {
+    margin-bottom: 16px;
+    padding: 8px 38px;
+    border: 1px solid $mediumGreyColor;
+    border-radius: 100px;
+  }
+
+  &__tag-link {
+    color: $mediumGreyColor;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 32px;
+  }
+}

@@ -1,0 +1,121 @@
+.blogpage {
+  // Main
+  &__main {
+    margin-top: $heightHeader;
+    padding: 0 80px;
+  }
+
+  // feature
+  &__feature {
+    @include dFlexCenter(space-between, flex-start, 141px);
+    margin: 0 -80px;
+    padding: 80px;
+    background-color: $lavenderColor;
+
+    &--title {
+      @include textCap($bold: 500);
+    }
+
+    &--heading {
+      @include heading2;
+
+      padding: 20px 50px 16px 0;
+    }
+
+    &--text {
+      @include textBody1;
+
+      padding: 16px 46px 32px 0;
+    }
+  }
+
+  &__feature-author {
+    @include textLabel;
+
+    span {
+      color: $purple;
+    }
+  }
+
+  &__feature-btn {
+    @include buttonPrimary;
+  }
+
+  // All post
+  &__post {
+    padding: 64px 133px 89px 0;
+    position: relative;
+
+    &--heading {
+      @include heading2;
+
+      padding: 20px 0 32px 0;
+    }
+
+    &--title {
+      @include textCap($purple);
+    }
+
+    &--text {
+      @include textBody1;
+
+      padding-right: 50px;
+    }
+  }
+
+  &__post-list {
+    border-top: 1px solid $mediumGreyColor;
+  }
+
+  &__post-item {
+    @include dFlexCenter(space-between, $gap: 32px);
+
+    padding-top: 64px;
+  }
+
+  &__post-img {
+  }
+
+  &__post-content {
+    cursor: pointer;
+  }
+
+  &__post-btn {
+    @include dFlexCenter($gap: 17px);
+
+    margin-top: 69px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    a {
+      @include heading4($mediumGreyColor);
+
+      text-decoration: none;
+      transition: 0.3s;
+
+      &:hover {
+        @include heading3;
+      }
+
+      &:active {
+        @include heading4;
+      }
+    }
+  }
+
+  // Category
+  &__category {
+    padding-top: 64px;
+
+    &--heading {
+      padding-bottom: 48px;
+    }
+  }
+
+  // Join
+  &__join {
+    padding: 128px;
+  }
+}

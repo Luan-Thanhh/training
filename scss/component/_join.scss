@@ -1,0 +1,20 @@
+.join {
+  margin: 0 auto;
+  max-width: 414px;
+  width: 100%;
+  text-align: center;
+
+  &--heading {
+    @include heading2;
+  }
+
+  &--text {
+    @include textBody1;
+
+    padding: 16px 0 32px 0;
+  }
+
+  &__btn {
+    @include buttonPrimary;
+  }
+}

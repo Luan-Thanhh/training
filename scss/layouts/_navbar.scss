@@ -1,0 +1,30 @@
+// Navbar
+.navbar {
+  @include dFlexCenter(space-between, center, 32px);
+
+  padding: 0 80px;
+  height: $heightHeader;
+  background-color: $darkBg;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+
+  &__menu {
+    @include dFlexCenter(flex-end, center, 24px);
+
+    flex: 1;
+  }
+
+  &__menu-item {
+    @include textBody1;
+
+    text-decoration: none;
+    color: $whiteColor;
+  }
+
+  &__btn {
+    @include buttonPrimary($whiteColor);
+  }
+}

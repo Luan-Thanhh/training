@@ -1,9 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&display=swap");
 
+// Abstracts
 @import "./abstracts/variables";
 @import "./abstracts/mixins";
 
+// Base
 @import "./base/base";
 
+// Component
+@import "./component/category";
+@import "./component/authors";
+@import "./component/join";
+
+// Layouts
+@import "./layouts/navbar";
+@import "./layouts/footer";
+
+// Page
 @import "./pages/homepage";
+@import "./pages/blogpage";
+@import "./pages/postpage";
+@import "./pages/aboutpage";
+@import "./pages/categorypage";

@@ -1,0 +1,61 @@
+// Footer
+.footer {
+  padding: 59px 80px;
+  background-color: $darkBg;
+
+  &__navbar {
+    padding: 0;
+    position: relative;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    margin: 57px 0 48px 0;
+    padding: 80px 64px;
+    background-color: rgba($whiteColor, 0.05);
+    width: 100%;
+  }
+
+  &__form-message {
+    @include heading2($whiteColor);
+  }
+
+  &__form-message,
+  &__form-group {
+    flex: 1;
+  }
+
+  &__form-group {
+    text-align: right;
+  }
+
+  &__form-control {
+    @include textBody1;
+
+    padding: 13px 25px;
+    border: 1px solid $mediumGreyColor;
+    background-color: transparent;
+    outline: none;
+    max-width: 323px;
+    width: 100%;
+  }
+
+  &__form-submit {
+    @include buttonPrimary;
+  }
+
+  &__contact {
+    @include dFlexCenter(space-between);
+  }
+
+  &__social {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+  }
+
+  &__address {
+    @include textBody1($whiteColor);
+  }
+}

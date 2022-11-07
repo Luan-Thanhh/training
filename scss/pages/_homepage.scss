@@ -1,41 +1,6 @@
 .homepage {
   // Header
   &__header {
-    height: $heightHeader;
-    background-color: $darkBg;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 999;
-  }
-
-  &__navbar {
-    @include dFlexCenter(space-between, center, 32px);
-
-    padding: 0 80px;
-    height: 100%;
-  }
-
-  &__menu {
-    @include dFlexCenter(flex-end, center, 24px);
-
-    flex: 1;
-  }
-
-  &__menu-item {
-    @include textBody1;
-
-    text-decoration: none;
-    color: $whiteColor;
-  }
-
-  &__nav-btn {
-    @include buttonPrimary($whiteColor);
-  }
-
-  // Startup
-  &__startup {
     margin-top: $heightHeader;
     height: 720px;
     background: center / cover no-repeat url("../img/man.png");
@@ -81,14 +46,14 @@
     }
   }
 
-  &__startup-content {
+  &__header-content {
     padding: 0 80px;
     position: relative;
     top: 128px;
     z-index: 1;
   }
 
-  &__startup-author {
+  &__header-author {
     @include textBody1($whiteColor);
 
     span {
@@ -96,7 +61,7 @@
     }
   }
 
-  &__startup-btn {
+  &__header-btn {
     @include buttonPrimary;
   }
 
@@ -161,9 +126,6 @@
 
   &__post-read-btn {
     @include buttonPrimary;
-  }
-
-  &__post-all {
   }
 
   &__post-list {
@@ -267,49 +229,16 @@
 
   // Category
   &__category {
-    @include dFlexCenter(space-between, center, 32px);
-
-    &--title {
-      @include heading3;
-
-      padding: 16px 0 4px 0;
-    }
+    padding: 128px;
 
     &--heading {
-      @include heading3;
-
-      padding: 128px 0 48px 0;
+      padding-bottom: 48px;
       text-align: center;
-    }
-  }
-
-  &__category-item {
-    padding: 32px;
-    border: 1px solid $mediumGreyColor;
-    cursor: pointer;
-    transition: 0.5s;
-
-    &:hover {
-      background-color: $yellowBg;
-    }
-  }
-
-  &__category-icon {
-    width: 47px;
-    height: 47px;
-
-    img {
-      width: 100%;
-      height: 100%;
-      background-color: $lightYellowColor;
-      padding: 12px;
-      border-radius: 10px;
     }
   }
 
   // Special post
   &__special {
-    margin-top: 128px;
     position: relative;
 
     img {
@@ -348,68 +277,12 @@
     margin-top: 32px;
   }
 
-  // Authors
-  &__authors {
-    @include dFlexCenter(space-between, $gap: 32px);
-
-    &--heading {
-      @include heading2;
-
-      padding: 128px 0 48px;
-      text-align: center;
-    }
+  // Author
+  &__author {
+    padding-top: 128px;
   }
 
-  &__author-item {
-    width: 100%;
-    padding: 40px 0;
-    text-align: center;
-
-    &:first-child {
-      background-color: $lightGreyColor;
-    }
-
-    &:nth-child(2) {
-      background-color: $lightYellowColor;
-    }
-
-    &:nth-child(3),
-    &:last-child {
-      background-color: $lightGreyColor;
-    }
-  }
-
-  &__author-avatar {
-    // padding: 0 84px;
-  }
-
-  &__author-name {
-    @include heading3;
-
-    padding-top: 20px;
-  }
-
-  &__author-job {
-    @include textBody2;
-
-    padding-bottom: 20px;
-  }
-
-  &__social-icons {
-    @include dFlexCenter($gap: 16px);
-
-    list-style: none;
-  }
-
-  &__social-item {
-  }
-
-  &__social-link {
-    color: $darkBg;
-    text-decoration: none;
-  }
-
-  // Featured
+  // Logo featured
   &__logo {
     @include dFlexCenter(space-between);
 
@@ -526,81 +399,6 @@
 
   // Join
   &__join {
-    margin: 0 auto;
-    padding: 128px 0;
-    max-width: 414px;
-    width: 100%;
-    text-align: center;
-
-    &--heading {
-      @include heading2;
-    }
-
-    &--text {
-      @include textBody1;
-
-      padding: 16px 0 32px 0;
-    }
-  }
-
-  &__join-btn {
-    @include buttonPrimary;
-  }
-
-  // Footer
-  &__footer {
-    padding: 59px 80px;
-    background-color: $darkBg;
-  }
-
-  &__footer &__navbar {
-    padding: 0;
-  }
-
-  &__footer-form {
-    display: flex;
-    justify-content: space-between;
-    margin: 57px 0 48px 0;
-    padding: 80px 64px;
-    background-color: rgba($whiteColor, 0.05);
-    width: 100%;
-  }
-
-  &__footer-message {
-    @include heading2($whiteColor);
-  }
-
-  &__footer-message,
-  &__form-group {
-    flex: 1;
-  }
-  &__form-group {
-    text-align: right;
-  }
-
-  &__form-control {
-    @include textBody1;
-
-    padding: 13px 25px;
-    border: 1px solid $mediumGreyColor;
-    background-color: transparent;
-    outline: none;
-    max-width: 323px;
-    width: 100%;
-  }
-
-  &__form-submit {
-    @include buttonPrimary;
-  }
-
-  &__footer-contact {
-    @include dFlexCenter(space-between);
-  }
-
-  &__footer-social &__social-icons {
-    gap: 30px;
-  }
-  &__footer-address {
-    @include textBody1($whiteColor);
+    padding-top: 128px;
   }
 }

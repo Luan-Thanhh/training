@@ -1,0 +1,41 @@
+// Category
+.category {
+  &--title {
+    @include heading3;
+
+    padding: 16px 0 4px 0;
+  }
+
+  &--heading {
+    @include heading3;
+  }
+
+  &__list {
+    @include dFlexCenter(space-between, center, 32px);
+  }
+
+  &__item {
+    padding: 32px;
+    border: 1px solid $mediumGreyColor;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+      border: 1px solid transparent;
+      background-color: $yellowBg;
+    }
+  }
+
+  &__icon {
+    width: 47px;
+    height: 47px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      background-color: $lightYellowColor;
+      padding: 12px;
+      border-radius: 10px;
+    }
+  }
+}

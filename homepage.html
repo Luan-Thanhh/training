@@ -9,47 +9,46 @@
   , initial-scale=1.0"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Day 01</title>
+    <title>Home</title>
   </head>
 
   <body>
     <div class="homepage">
-      <div class="homepage__header">
-        <div class="homepage__navbar">
-          <div class="homepage__navbar-logo">
-            <a href="#">
-              <img src="./img/logo.svg" alt="" />
-            </a>
-          </div>
-          <div class="homepage__menu">
-            <a href="#" class="homepage__menu-item">Home</a>
-            <a href="#!" class="homepage__menu-item">Blog</a>
-            <a href="#!" class="homepage__menu-item">About us</a>
-            <a href="#!" class="homepage__menu-item">Contact us</a>
-          </div>
-          <button class="homepage__nav-btn">Subscribe</button>
+      <nav class="navbar">
+        <div class="navbar__logo">
+          <a href="#">
+            <img src="./img/logo.svg" alt="" />
+          </a>
         </div>
-      </div>
+        <div class="navbar__menu">
+          <a href="#" class="navbar__menu-item">Home</a>
+          <a href="./blogpage.html" class="navbar__menu-item">Blog</a>
+          <a href="./aboutpage.html" class="navbar__menu-item">About us</a>
+          <a href="#!" class="navbar__menu-item">Contact us</a>
+        </div>
+        <button class="navbar__btn">Subscribe</button>
+      </nav>
 
-      <div class="homepage__startup">
-        <div class="homepage__startup-content">
-          <p class="homepage__startup--sub-heading">
+      <!-- Home header -->
+      <header class="homepage__header">
+        <div class="homepage__header-content">
+          <p class="homepage__header--sub-heading">
             Posted on <span>startup</span>
           </p>
-          <h3 class="homepage__startup--heading">
+          <h3 class="homepage__header--heading">
             Step-by-step guide to choosing great font pairs
           </h3>
-          <p class="homepage__startup-author">
+          <p class="homepage__header-author">
             By <span>James West</span> | May 23, 2022
           </p>
-          <p class="homepage__startup--text">
+          <p class="homepage__header--text">
             Duis aute irure dolor in reprehenderit in voluptate velit esse
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
             cupidatat non proident.
           </p>
-          <button class="homepage__startup-btn">Read More ></button>
+          <button class="homepage__header-btn">Read More ></button>
         </div>
-      </div>
+      </header>
 
       <div class="homepage__main">
         <!-- Post -->
@@ -58,7 +57,7 @@
             <h4 class="homepage__post--heading">Featured Post</h4>
             <div class="homepage__post-info">
               <div class="homepage__post-img">
-                <img src="./img/post/feature-fost.png" alt="" />
+                <img src="./img/post/feature-fost1.png" alt="" />
               </div>
               <p class="homepage__post-author">
                 By <span>John Doe</span> | May 23, 2022
@@ -146,43 +145,49 @@
         </div>
 
         <!-- Category -->
-        <h3 class="homepage__category--heading">Choose A Catagory</h3>
         <div class="homepage__category">
-          <div class="homepage__category-item">
-            <div class="homepage__category-icon">
-              <img src="./img/category/business.svg" alt="" />
+          <div class="category">
+            <h3 class="homepage__category--heading category--heading">
+              Choose A Category
+            </h3>
+            <div class="category__list">
+              <div class="category__item">
+                <div class="category__icon">
+                  <img src="./img/category/business.svg" alt="" />
+                </div>
+                <h4 class="category--title">Business</h4>
+                <p class="category--text">
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                </p>
+              </div>
+              <div class="category__item">
+                <div class="category__icon">
+                  <img src="./img/category/startup.svg" alt="" />
+                </div>
+                <h4 class="category--title">Startup</h4>
+                <p class="category--text">
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                </p>
+              </div>
+              <div class="category__item">
+                <div class="category__icon">
+                  <img src="./img/category/economy.svg" alt="" />
+                </div>
+                <h4 class="category--title">Economy</h4>
+                <p class="category--text">
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                </p>
+              </div>
+              <div class="category__item">
+                <div class="category__icon">
+                  <img src="./img/category/technology.svg" alt="" />
+                </div>
+                <h4 class="category--title">Technology</h4>
+                <p class="category--text">
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                </p>
+              </div>
             </div>
-            <h4 class="homepage__category--title">Business</h4>
-            <p class="homepage__category--text">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-            </p>
-          </div>
-          <div class="homepage__category-item">
-            <div class="homepage__category-icon">
-              <img src="./img/category/startup.svg" alt="" />
-            </div>
-            <h4 class="homepage__category--title">Startup</h4>
-            <p class="homepage__category--text">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-            </p>
-          </div>
-          <div class="homepage__category-item">
-            <div class="homepage__category-icon">
-              <img src="./img/category/economy.svg" alt="" />
-            </div>
-            <h4 class="homepage__category--title">Economy</h4>
-            <p class="homepage__category--text">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-            </p>
-          </div>
-          <div class="homepage__category-item">
-            <div class="homepage__category-icon">
-              <img src="./img/category/technology.svg" alt="" />
-            </div>
-            <h4 class="homepage__category--title">Technology</h4>
-            <p class="homepage__category--text">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-            </p>
           </div>
         </div>
 
@@ -209,123 +214,135 @@
         </div>
 
         <!-- Authors -->
-        <h3 class="homepage__authors--heading">List of Authors</h3>
-        <div class="homepage__authors">
-          <div class="homepage__author-item">
-            <div class="homepage__author-avatar">
-              <img src="./img/author/author-1.png" alt="" />
+        <div class="homepage__author">
+          <div class="author">
+            <h3 class="author--heading">List of Authors</h3>
+            <div class="author__list">
+              <div class="author__item">
+                <div class="author__avatar">
+                  <img src="./img/author/author-1.png" alt="" />
+                </div>
+                <h4 class="author__name">Floyd Miles</h4>
+                <p class="author__job">Content Writer @Company</p>
+                <ul class="author__social-icons">
+                  <li class="author__social-item">
+                    <a href="#!" class="author__social-link"
+                      ><img src="./img/social/facebook-icon.svg" alt="facebook"
+                    /></a>
+                  </li>
+                  <li class="author__social-item">
+                    <a href="#!" class="author__social-link"
+                      ><img src="./img/social/twitter-icon.svg" alt="twitter"
+                    /></a>
+                  </li>
+                  <li class="author__social-item">
+                    <a href="#!" class="author__social-link"
+                      ><img
+                        src="./img/social/instagram-icon.svg"
+                        alt="instagram"
+                    /></a>
+                  </li>
+                  <li class="author__social-item">
+                    <a href="#!" class="author__social-link"
+                      ><img src="./img/social/linkedIn-icon.svg" alt="linkedIn"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="author__item">
+                <div class="author__avatar">
+                  <img src="./img/author/author-2.png" alt="" />
+                </div>
+                <h4 class="author__name">Dianne Russell</h4>
+                <p class="author__job">Content Writer @Company</p>
+                <ul class="author__social-icons">
+                  <li class="author__social-item">
+                    <a href="#!" class="author__social-link"
+                      ><img src="./img/social/facebook-icon.svg" alt="facebook"
+                    /></a>
+                  </li>
+                  <li class="author__social-item">
+                    <a href="#!" class="author__social-link"
+                      ><img src="./img/social/twitter-icon.svg" alt="twitter"
+                    /></a>
+                  </li>
+                  <li class="author__social-item">
+                    <a href="#!" class="author__social-link"
+                      ><img
+                        src="./img/social/instagram-icon.svg"
+                        alt="instagram"
+                    /></a>
+                  </li>
+                  <li class="author__social-item">
+                    <a href="#!" class="author__social-link"
+                      ><img src="./img/social/linkedIn-icon.svg" alt="linkedIn"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="author__item">
+                <div class="author__avatar">
+                  <img src="./img/author/author-3.png" alt="" />
+                </div>
+                <h4 class="author__name">Jenny Wilson</h4>
+                <p class="author__job">Content Writer @Company</p>
+                <ul class="author__social-icons">
+                  <li class="author__social-item">
+                    <a href="#!" class="author__social-link"
+                      ><img src="./img/social/facebook-icon.svg" alt="facebook"
+                    /></a>
+                  </li>
+                  <li class="author__social-item">
+                    <a href="#!" class="author__social-link"
+                      ><img src="./img/social/twitter-icon.svg" alt="twitter"
+                    /></a>
+                  </li>
+                  <li class="author__social-item">
+                    <a href="#!" class="author__social-link"
+                      ><img
+                        src="./img/social/instagram-icon.svg"
+                        alt="instagram"
+                    /></a>
+                  </li>
+                  <li class="author__social-item">
+                    <a href="#!" class="author__social-link"
+                      ><img src="./img/social/linkedIn-icon.svg" alt="linkedIn"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="author__item">
+                <div class="author__avatar">
+                  <img src="./img/author/author-4.png" alt="" />
+                </div>
+                <h4 class="author__name">Leslie Alexander</h4>
+                <p class="author__job">Content Writer @Company</p>
+                <ul class="author__social-icons">
+                  <li class="author__social-item">
+                    <a href="#!" class="author__social-link"
+                      ><img src="./img/social/facebook-icon.svg" alt="facebook"
+                    /></a>
+                  </li>
+                  <li class="author__social-item">
+                    <a href="#!" class="author__social-link"
+                      ><img src="./img/social/twitter-icon.svg" alt="twitter"
+                    /></a>
+                  </li>
+                  <li class="author__social-item">
+                    <a href="#!" class="author__social-link"
+                      ><img
+                        src="./img/social/instagram-icon.svg"
+                        alt="instagram"
+                    /></a>
+                  </li>
+                  <li class="author__social-item">
+                    <a href="#!" class="author__social-link"
+                      ><img src="./img/social/linkedIn-icon.svg" alt="linkedIn"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <h4 class="homepage__author-name">Floyd Miles</h4>
-            <p class="homepage__author-job">Content Writer @Company</p>
-            <ul class="homepage__social-icons">
-              <li class="homepage__social-item">
-                <a href="#!" class="homepage__social-link"
-                  ><img src="./img/social/facebook-icon.svg" alt="facebook"
-                /></a>
-              </li>
-              <li class="homepage__social-item">
-                <a href="#!" class="homepage__social-link"
-                  ><img src="./img/social/twitter-icon.svg" alt="twitter"
-                /></a>
-              </li>
-              <li class="homepage__social-item">
-                <a href="#!" class="homepage__social-link"
-                  ><img src="./img/social/instagram-icon.svg" alt="instagram"
-                /></a>
-              </li>
-              <li class="homepage__social-item">
-                <a href="#!" class="homepage__social-link"
-                  ><img src="./img/social/linkedIn-icon.svg" alt="linkedIn"
-                /></a>
-              </li>
-            </ul>
-          </div>
-          <div class="homepage__author-item">
-            <div class="homepage__author-avatar">
-              <img src="./img/author/author-2.png" alt="" />
-            </div>
-            <h4 class="homepage__author-name">Dianne Russell</h4>
-            <p class="homepage__author-job">Content Writer @Company</p>
-            <ul class="homepage__social-icons">
-              <li class="homepage__social-item">
-                <a href="#!" class="homepage__social-link"
-                  ><img src="./img/social/facebook-icon.svg" alt="facebook"
-                /></a>
-              </li>
-              <li class="homepage__social-item">
-                <a href="#!" class="homepage__social-link"
-                  ><img src="./img/social/twitter-icon.svg" alt="twitter"
-                /></a>
-              </li>
-              <li class="homepage__social-item">
-                <a href="#!" class="homepage__social-link"
-                  ><img src="./img/social/instagram-icon.svg" alt="instagram"
-                /></a>
-              </li>
-              <li class="homepage__social-item">
-                <a href="#!" class="homepage__social-link"
-                  ><img src="./img/social/linkedIn-icon.svg" alt="linkedIn"
-                /></a>
-              </li>
-            </ul>
-          </div>
-          <div class="homepage__author-item">
-            <div class="homepage__author-avatar">
-              <img src="./img/author/author-3.png" alt="" />
-            </div>
-            <h4 class="homepage__author-name">Jenny Wilson</h4>
-            <p class="homepage__author-job">Content Writer @Company</p>
-            <ul class="homepage__social-icons">
-              <li class="homepage__social-item">
-                <a href="#!" class="homepage__social-link"
-                  ><img src="./img/social/facebook-icon.svg" alt="facebook"
-                /></a>
-              </li>
-              <li class="homepage__social-item">
-                <a href="#!" class="homepage__social-link"
-                  ><img src="./img/social/twitter-icon.svg" alt="twitter"
-                /></a>
-              </li>
-              <li class="homepage__social-item">
-                <a href="#!" class="homepage__social-link"
-                  ><img src="./img/social/instagram-icon.svg" alt="instagram"
-                /></a>
-              </li>
-              <li class="homepage__social-item">
-                <a href="#!" class="homepage__social-link"
-                  ><img src="./img/social/linkedIn-icon.svg" alt="linkedIn"
-                /></a>
-              </li>
-            </ul>
-          </div>
-          <div class="homepage__author-item">
-            <div class="homepage__author-avatar">
-              <img src="./img/author/author-4.png" alt="" />
-            </div>
-            <h4 class="homepage__author-name">Leslie Alexander</h4>
-            <p class="homepage__author-job">Content Writer @Company</p>
-            <ul class="homepage__social-icons">
-              <li class="homepage__social-item">
-                <a href="#!" class="homepage__social-link"
-                  ><img src="./img/social/facebook-icon.svg" alt="facebook"
-                /></a>
-              </li>
-              <li class="homepage__social-item">
-                <a href="#!" class="homepage__social-link"
-                  ><img src="./img/social/twitter-icon.svg" alt="twitter"
-                /></a>
-              </li>
-              <li class="homepage__social-item">
-                <a href="#!" class="homepage__social-link"
-                  ><img src="./img/social/instagram-icon.svg" alt="instagram"
-                /></a>
-              </li>
-              <li class="homepage__social-item">
-                <a href="#!" class="homepage__social-link"
-                  ><img src="./img/social/linkedIn-icon.svg" alt="linkedIn"
-                /></a>
-              </li>
-            </ul>
           </div>
         </div>
 
@@ -394,79 +411,79 @@
 
         <!-- Join -->
         <div class="homepage__join">
-          <h3 class="homepage__join--heading">
-            Join our team to be a part of our story
-          </h3>
-          <p class="homepage__join--text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
-          </p>
-          <button class="homepage__join-btn">Join Now</button>
+          <div class="join">
+            <h3 class="join--heading">
+              Join our team to be a part of our story
+            </h3>
+            <p class="join--text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt.
+            </p>
+            <button class="join__btn">Join Now</button>
+          </div>
         </div>
       </div>
 
       <!-- Footer -->
-      <div class="homepage__footer">
-        <div class="homepage__navbar">
-          <div class="homepage__navbar-logo">
+      <footer class="footer">
+        <nav class="navbar footer__navbar">
+          <div class="navbar__logo">
             <a href="#">
               <img src="./img/logo.svg" alt="" />
             </a>
           </div>
-          <div class="homepage__menu">
-            <a href="#" class="homepage__menu-item">Home</a>
-            <a href="#!" class="homepage__menu-item">Blog</a>
-            <a href="#!" class="homepage__menu-item">About us</a>
-            <a href="#!" class="homepage__menu-item">Contact us</a>
-            <a href="#!" class="homepage__menu-item">Privacy Policy</a>
+          <div class="navbar__menu">
+            <a href="#" class="navbar__menu-item">Home</a>
+            <a href="./blogpage.html" class="navbar__menu-item">Blog</a>
+            <a href="./aboutpage.html" class="navbar__menu-item">About us</a>
+            <a href="#!" class="navbar__menu-item">Contact us</a>
+            <a href="#!" class="navbar__menu-item">Privacy Policy</a>
           </div>
-        </div>
-        <div class="homepage__footer-form">
-          <h3 class="homepage__footer-message">
+        </nav>
+        <div class="footer__form">
+          <h3 class="footer__form-message">
             Subscribe to our news letter to get latest updates and news
           </h3>
 
-          <div class="homepage__form-group">
+          <div class="footer__form-group">
             <input
               type="email"
-              class="homepage__form-control"
+              class="footer__form-control"
               placeholder="Enter Your Email"
             />
-            <button class="homepage__form-submit">Subscribe</button>
+            <button class="footer__form-submit">Subscribe</button>
           </div>
         </div>
-        <div class="homepage__footer-contact">
-          <div class="homepage__footer-address">
+        <div class="footer__contact">
+          <div class="footer__address">
             <p>Finstreet 118 2561 Fintown</p>
             <p>Hello@finsweet.com 020 7993 2905</p>
           </div>
 
-          <div class="homepage__footer-social">
-            <ul class="homepage__social-icons">
-              <li class="homepage__social-item">
-                <a href="#!" class="homepage__social-link"
-                  ><img src="./img/footer/facebook-icon.svg" alt="facebook"
-                /></a>
-              </li>
-              <li class="homepage__social-item">
-                <a href="#!" class="homepage__social-link"
-                  ><img src="./img/footer/twitter-icon.svg" alt="twitter"
-                /></a>
-              </li>
-              <li class="homepage__social-item">
-                <a href="#!" class="homepage__social-link"
-                  ><img src="./img/footer/instagram-icon.svg" alt="instagram"
-                /></a>
-              </li>
-              <li class="homepage__social-item">
-                <a href="#!" class="homepage__social-link"
-                  ><img src="./img/footer/linkedIn-icon.svg" alt="linkedIn"
-                /></a>
-              </li>
-            </ul>
-          </div>
+          <ul class="footer__social">
+            <li class="footer__social-item">
+              <a href="#!" class="footer__social-link"
+                ><img src="./img/footer/facebook-icon.svg" alt="facebook"
+              /></a>
+            </li>
+            <li class="footer__social-item">
+              <a href="#!" class="footer__social-link"
+                ><img src="./img/footer/twitter-icon.svg" alt="twitter"
+              /></a>
+            </li>
+            <li class="footer__social-item">
+              <a href="#!" class="footer__social-link"
+                ><img src="./img/footer/instagram-icon.svg" alt="instagram"
+              /></a>
+            </li>
+            <li class="footer__social-item">
+              <a href="#!" class="footer__social-link"
+                ><img src="./img/footer/linkedIn-icon.svg" alt="linkedIn"
+              /></a>
+            </li>
+          </ul>
         </div>
-      </div>
+      </footer>
     </div>
   </body>
 </html>
