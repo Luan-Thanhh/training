@@ -49,6 +49,9 @@ body {
   border: 1px solid transparent;
   background-color: #ffd050;
 }
+.category__link {
+  text-decoration: none;
+}
 .category__icon {
   width: 47px;
   height: 47px;
