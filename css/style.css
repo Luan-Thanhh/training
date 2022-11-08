@@ -705,7 +705,7 @@ body {
 }
 @media (max-width: 600px) {
   .homepage__main {
-    padding: 3.2rem 1.6rem;
+    padding: 4.8rem 1.6rem;
   }
 }
 .homepage__post {
@@ -1262,7 +1262,7 @@ body {
 @media (max-width: 600px) {
   .blogpage__feature {
     margin: 0 -1.6rem;
-    padding: 1.6rem;
+    padding: 3.2rem 1.6rem;
   }
 }
 .blogpage__feature--title {
@@ -2183,6 +2183,11 @@ body {
   height: 2.3rem;
   background-color: #ffd050;
 }
+@media (max-width: 600px) {
+  .authorpage__header::before {
+    left: 0;
+  }
+}
 .authorpage__header::after {
   position: absolute;
   right: 20.8rem;
@@ -2191,6 +2196,12 @@ body {
   width: 20%;
   height: 2.3rem;
   background-color: #592ea9;
+}
+@media (max-width: 600px) {
+  .authorpage__header::after {
+    width: 40%;
+    right: 0;
+  }
 }
 @media (max-width: 900px) {
   .authorpage__header {
@@ -2263,6 +2274,13 @@ body {
     flex-direction: column;
     padding-top: 3.2rem;
   }
+}
+.authorpage__item-img {
+  max-width: 41.2rem;
+  width: 100%;
+}
+.authorpage__item-img img {
+  width: 100%;
 }
 .contactpage__main {
   padding: 12.8rem 33.6rem;
