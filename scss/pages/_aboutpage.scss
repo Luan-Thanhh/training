@@ -35,6 +35,10 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
       }
+
+      @include respond(mobile) {
+        display: none;
+      }
     }
 
     @include respond(tablet) {
@@ -168,6 +172,10 @@
 
     &--heading {
       @include headingDisplay;
+
+      @include respond(mobile) {
+        @include heading1;
+      }
     }
 
     &--text {
@@ -177,6 +185,11 @@
     @include respond(tablet) {
       left: 0;
       width: 100%;
+      gap: 3.2rem;
+    }
+
+    @include respond(mobile) {
+      gap: 1.6rem;
     }
   }
 

@@ -1651,6 +1651,11 @@ body {
     overflow: hidden;
   }
 }
+@media (max-width: 600px) {
+  .aboutpage__header--text {
+    display: none;
+  }
+}
 @media (max-width: 900px) {
   .aboutpage__header {
     padding: 4rem 5.8rem 0 9.3rem;
@@ -1794,6 +1799,15 @@ body {
   color: #232536;
   letter-spacing: -2px;
 }
+@media (max-width: 600px) {
+  .aboutpage__overview-quantity--heading {
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 6.4rem;
+    color: #232536;
+    letter-spacing: -2px;
+  }
+}
 .aboutpage__overview-quantity--text {
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -1805,6 +1819,12 @@ body {
   .aboutpage__overview-quantity {
     left: 0;
     width: 100%;
+    gap: 3.2rem;
+  }
+}
+@media (max-width: 600px) {
+  .aboutpage__overview-quantity {
+    gap: 1.6rem;
   }
 }
 .aboutpage__information {
