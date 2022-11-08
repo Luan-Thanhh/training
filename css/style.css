@@ -753,7 +753,6 @@ body {
   width: 100%;
 }
 .homepage__post-info {
-  margin-right: 3.2rem;
   padding: 3.2rem;
   border: 0.1rem solid #6d6e76;
 }
@@ -818,6 +817,7 @@ body {
 }
 .homepage__post-item {
   padding: 3.2rem;
+  padding-top: 0;
   transition: 0.35s;
   cursor: pointer;
 }
@@ -870,7 +870,7 @@ body {
   height: 2.3rem;
   background-color: #592ea9;
 }
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .homepage__introduce::after {
     max-width: 30%;
     right: 0;
@@ -886,7 +886,7 @@ body {
   height: 2.3rem;
   background-color: #ffd050;
 }
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .homepage__introduce::before {
     max-width: 70%;
     left: 0;
@@ -935,7 +935,7 @@ body {
   }
 }
 .homepage__category {
-  padding: 12.8rem;
+  padding: 8rem;
 }
 .homepage__category--heading {
   padding-bottom: 4.8rem;
