@@ -1,6 +1,15 @@
 .contactpage {
   &__main {
-    padding: 128px 336px;
+    padding: 12.8rem 33.6rem;
+
+    @include respond(tablet) {
+      margin-top: $heightHeader;
+      padding: 6.8rem 16.9rem;
+    }
+
+    @include respond(tablet) {
+      padding: 2.4rem;
+    }
   }
 
   &__content {
@@ -13,7 +22,7 @@
     &--heading {
       @include heading1;
 
-      padding: 12px 0 24px 0;
+      padding: 1.2rem 0 2.4rem 0;
     }
 
     &--text {
@@ -22,24 +31,24 @@
   }
 
   &__information {
-    @include dFlexCenter(space-between, flex-start, 42px);
+    @include dFlexCenter(space-between, flex-start, 4.2rem);
 
-    margin: 64px 0 32px 0;
-    padding: 48px 64px;
+    margin: 6.4rem 0 3.2rem 0;
+    padding: 4.8rem 6.4rem;
     background-color: $purple;
 
     &--title {
       @include textBody2($whiteColor);
 
-      padding-bottom: 16px;
-      border-bottom: 1px solid $whiteColor;
+      padding-bottom: 1.6rem;
+      border-bottom: 0.1rem solid $whiteColor;
       opacity: 0.6;
     }
 
     &--heading {
       @include heading5($whiteColor);
 
-      padding-top: 16px;
+      padding-top: 1.6rem;
     }
 
     &--text {
@@ -61,7 +70,7 @@
   }
 
   &__form-group {
-    padding-bottom: 16px;
+    padding-bottom: 1.6rem;
 
     textarea {
       resize: vertical;
@@ -72,8 +81,8 @@
     @include textBody1;
 
     width: 100%;
-    padding: 24px;
-    border: 1px solid $mediumGreyColor;
+    padding: 2.4rem;
+    border: 0.1rem solid $mediumGreyColor;
     background-color: transparent;
   }
 

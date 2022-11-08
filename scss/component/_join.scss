@@ -1,6 +1,6 @@
 .join {
   margin: 0 auto;
-  max-width: 414px;
+  max-width: 41.4rem;
   width: 100%;
   text-align: center;
 
@@ -11,7 +11,7 @@
   &--text {
     @include textBody1;
 
-    padding: 16px 0 32px 0;
+    padding: 1.6rem 0 3.2rem 0;
   }
 
   &__btn {

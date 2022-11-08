@@ -1,99 +1,100 @@
 @mixin headingDisplay($color: $darkBg) {
   font-weight: 700;
-  font-size: 56px;
-  line-height: 64px;
+  font-size: 5.6rem;
+  line-height: 6.4rem;
   color: $color;
   letter-spacing: -2px;
 }
 
 @mixin heading1($color: $darkBg) {
   font-weight: 700;
-  font-size: 48px;
-  line-height: 64px;
+  font-size: 4.8rem;
+  line-height: 6.4rem;
   color: $color;
   letter-spacing: -2px;
 }
 
 @mixin heading2($color: $darkBg) {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 48px;
+  font-size: 3.6rem;
+  line-height: 4.8rem;
   color: $color;
   letter-spacing: -2px;
 }
 
 @mixin heading3($color: $darkBg) {
   font-weight: 700;
-  font-size: 28px;
-  line-height: 40px;
+  font-size: 2.8rem;
+  line-height: 4rem;
   color: $color;
   letter-spacing: -1px;
 }
 
 @mixin heading4($color: $darkBg) {
   font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
   color: $color;
 }
 
 @mixin heading5($color: $darkBg) {
   font-weight: 700;
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 2rem;
+  line-height: 3.2rem;
   color: $color;
 }
 
 @mixin heading6($color: $darkBg) {
   font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
   color: $color;
 }
 
 @mixin textBody1($color: $mediumGreyColor) {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
   color: $color;
 }
 
 @mixin textBody2($color: $mediumGreyColor) {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 1.4rem;
+  line-height: 2rem;
   color: $color;
 }
 
 @mixin textLabel($color: $darkBg) {
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 1.4rem;
+  line-height: 2rem;
   color: $color;
 }
 
 @mixin textCap($color: $darkBg, $bold: 600) {
   font-family: "Inter", sans-serif;
   font-weight: $bold;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1.6rem;
+  line-height: 2rem;
   color: $color;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
 
 @mixin buttonPrimary($color: $yellowBg) {
-  padding: 16px 48px;
+  padding: 1.6rem 4.8rem;
   border: none;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
   background-color: $color;
   color: $darkBg;
   text-decoration: none;
+  white-space: nowrap;
   outline: none;
   cursor: pointer;
   transition: 0.5s;
@@ -131,4 +132,34 @@
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+}
+
+@mixin respond($breakpoint) {
+  // Big desktop
+  @if $breakpoint == bigDesktop {
+    @media (max-width: 1800px) {
+      @content;
+    }
+  }
+
+  // Desktop
+  @if $breakpoint == desktop {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  // Tablet
+  @if $breakpoint == tablet {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+
+  // Mobile
+  @if $breakpoint == mobile {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
 }

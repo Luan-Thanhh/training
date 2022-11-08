@@ -1,9 +1,9 @@
 .authorpage {
   &__header {
-    @include dFlexCenter(space-between, $gap: 32px);
+    @include dFlexCenter(space-between, $gap: 3.2rem);
 
     margin-top: $heightHeader;
-    padding: 128px 208px;
+    padding: 12.8rem 20.8rem;
     background-color: $lavenderColor;
     position: relative;
 
@@ -14,27 +14,37 @@
     &--text {
       @include textBody1;
 
-      padding: 24px 0;
+      padding: 2.4rem 0;
     }
 
     &::before {
       position: absolute;
       bottom: 0;
-      left: 208px;
+      left: 20.8rem;
       content: "";
       width: 60%;
-      height: 23px;
+      height: 2.3rem;
       background-color: $yellowBg;
     }
 
     &::after {
       position: absolute;
-      right: 208px;
+      right: 20.8rem;
       bottom: 0;
       content: "";
       width: 20%;
-      height: 23px;
+      height: 2.3rem;
       background-color: $purple;
+    }
+
+    @include respond(tablet) {
+      padding: 6.4rem 15.4rem;
+      flex-direction: column;
+    }
+
+    @include respond(tablet) {
+      padding: 3.2rem 7.2rem;
+      flex-direction: column;
     }
   }
 
@@ -47,13 +57,21 @@
   &__header-social {
     a {
       text-decoration: none;
-      padding-right: 16px;
+      padding-right: 1.6rem;
     }
   }
 
   // Main
   &__main {
-    padding: 128px 208px;
+    padding: 12.8rem 20.8rem;
+
+    @include respond(tablet) {
+      padding: 6.4rem 15.4rem;
+    }
+
+    @include respond(mobile) {
+      padding: 3.2rem 7.2rem;
+    }
   }
 
   // Post
@@ -67,9 +85,9 @@
   }
 
   &__item {
-    @include dFlexCenter(space-between, $gap: 32px);
+    @include dFlexCenter(space-between, $gap: 3.2rem);
 
-    padding-top: 64px;
+    padding-top: 6.4rem;
 
     &--title {
       @include textCap($purple);
@@ -78,11 +96,15 @@
     &--heading {
       @include heading2;
 
-      padding: 20px 0 16px 0;
+      padding: 2rem 0 1.6rem 0;
     }
 
     &--text {
       @include textBody1;
+    }
+
+    @include respond(tablet) {
+      flex-direction: column;
     }
   }
 

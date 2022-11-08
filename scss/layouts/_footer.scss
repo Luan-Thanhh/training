@@ -1,21 +1,35 @@
 // Footer
 .footer {
-  padding: 59px 80px;
+  padding: 5.9rem 8rem;
   background-color: $darkBg;
+
+  @include respond(tablet) {
+    padding: 3.2rem;
+  }
+
+  @include respond(mobile) {
+    padding: 1.6rem;
+  }
 
   &__navbar {
     padding: 0;
     position: relative;
     z-index: 1;
+    border: none;
   }
 
   &__form {
     display: flex;
     justify-content: space-between;
-    margin: 57px 0 48px 0;
-    padding: 80px 64px;
+    margin: 5.7rem 0 4.8rem 0;
+    padding: 8rem 6.4rem;
     background-color: rgba($whiteColor, 0.05);
     width: 100%;
+
+    @include respond(tablet) {
+      flex-direction: column;
+      gap: 3.2rem;
+    }
   }
 
   &__form-message {
@@ -34,26 +48,40 @@
   &__form-control {
     @include textBody1;
 
-    padding: 13px 25px;
-    border: 1px solid $mediumGreyColor;
+    padding: 1.3rem 2.5rem;
+    border: 0.1rem solid $mediumGreyColor;
     background-color: transparent;
     outline: none;
-    max-width: 323px;
+    max-width: 32.3rem;
     width: 100%;
+
+    @include respond(tablet) {
+      max-width: 100%;
+    }
   }
 
   &__form-submit {
     @include buttonPrimary;
+
+    @include respond(tablet) {
+      width: 100%;
+      margin-top: 3.2rem;
+    }
   }
 
   &__contact {
     @include dFlexCenter(space-between);
+
+    @include respond(tablet) {
+      flex-direction: column;
+      gap: 3.2rem;
+    }
   }
 
   &__social {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 3rem;
   }
 
   &__address {

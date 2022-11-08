@@ -3,23 +3,33 @@
   &--heading {
     @include heading2;
 
-    padding-bottom: 48px;
+    padding-bottom: 4.8rem;
     text-align: center;
   }
 
   &__list {
-    @include dFlexCenter(space-between, $gap: 32px);
+    @include dFlexCenter(space-between, $gap: 3.2rem);
 
-    margin-bottom: 32px;
+    margin-bottom: 3.2rem;
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    @include respond(tablet) {
+      flex-direction: column;
+      gap: 3.2rem;
+    }
+
+    @include respond(mobile) {
+      width: 100%;
+      gap: 1.6rem;
     }
   }
 
   &__item {
     width: 100%;
-    padding: 40px 0;
+    padding: 4rem 0;
     text-align: center;
 
     &:first-child {
@@ -37,11 +47,11 @@
   }
 
   &__avatar {
-    // padding: 0 84px;
+    // padding: 0 8.4rem;
   }
 
   &__name {
-    padding-top: 20px;
+    padding-top: 2rem;
 
     a {
       @include heading3;
@@ -53,11 +63,11 @@
   &__job {
     @include textBody2;
 
-    padding-bottom: 20px;
+    padding-bottom: 2rem;
   }
 
   &__social-icons {
-    @include dFlexCenter($gap: 16px);
+    @include dFlexCenter($gap: 1.6rem);
 
     list-style: none;
   }

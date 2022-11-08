@@ -8,10 +8,25 @@
 
 html {
   scroll-behavior: smooth;
+
+  @include respond(bigDesktop) {
+    font-size: 75%;
+  }
+
+  font-size: 62.5%;
+
+  @include respond(desktop) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tablet) {
+    font-size: 50%;
+  }
 }
 
 body {
   box-sizing: border-box;
+  font-size: 1.6rem;
   font-family: "Sen", sans-serif;
   color: $darkBg;
 }

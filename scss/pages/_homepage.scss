@@ -2,7 +2,7 @@
   // Header
   &__header {
     margin-top: $heightHeader;
-    height: 720px;
+    height: 72rem;
     background: center / cover no-repeat url("../img/man.png");
     background-attachment: fixed;
     position: relative;
@@ -32,25 +32,41 @@
     &--heading {
       @include headingDisplay($whiteColor);
 
-      padding: 24px 0;
-      max-width: 803px;
+      padding: 2.4rem 0;
+      max-width: 80.3rem;
       width: 100%;
+
+      @include respond(tablet) {
+        @include heading1($whiteColor);
+      }
+
+      @include respond(mobile) {
+        @include heading2($whiteColor);
+      }
     }
 
     &--text {
       @include textBody1($whiteColor);
 
-      padding: 16px 0 48px 0;
-      max-width: 600px;
+      padding: 1.6rem 0 4.8rem 0;
+      max-width: 60rem;
       width: 100%;
     }
   }
 
   &__header-content {
-    padding: 0 80px;
+    padding: 0 8rem;
     position: relative;
-    top: 128px;
+    top: 12.8rem;
     z-index: 1;
+
+    @include respond(tablet) {
+      padding: 0 3.2rem;
+    }
+
+    @include respond(mobile) {
+      padding: 0 1.6rem;
+    }
   }
 
   &__header-author {
@@ -67,18 +83,25 @@
 
   // Main
   &__main {
-    padding: 130px 80px;
+    padding: 13rem 8rem;
+
+    @include respond(tablet) {
+      padding: 4.8rem;
+    }
+
+    @include respond(mobile) {
+      padding: 3.2rem 1.6rem;
+    }
   }
 
   // Post
   &__post {
     display: flex;
+    gap: 3.2rem;
     position: relative;
 
     &--heading {
       @include heading2;
-
-      padding-bottom: 32px;
     }
 
     &--title {
@@ -88,25 +111,38 @@
     &--text {
       @include textBody1;
 
-      margin-right: 118px;
-      padding: 16px 0 32px 0;
+      margin-right: 11.8rem;
+      padding: 1.6rem 0 3.2rem 0;
       text-align: justify;
+    }
+
+    @include respond(tablet) {
+      align-items: center;
     }
   }
 
   &__post-feature {
-    max-width: 733px;
+    max-width: 73.3rem;
     width: 100%;
   }
 
   &__post-info {
-    margin-right: 32px;
-    padding: 32px;
-    border: 1px solid $mediumGreyColor;
+    margin-right: 3.2rem;
+    padding: 3.2rem;
+    border: 0.1rem solid $mediumGreyColor;
+
+    @include respond(tablet) {
+      margin: 0;
+      margin-top: 3.2rem;
+    }
+
+    @include respond(tablet) {
+      margin-top: 2.4rem;
+    }
   }
 
   &__post-img {
-    max-width: 733px;
+    max-width: 73.3rem;
     width: 100%;
 
     img {
@@ -118,7 +154,8 @@
   &__post-author {
     @include textLabel;
 
-    padding: 32px 0 16px 0;
+    padding: 3.2rem 0 1.6rem 0;
+
     span {
       color: $purple;
     }
@@ -137,7 +174,7 @@
   }
 
   &__post-item {
-    padding: 0 225.72px 25px 32px;
+    padding: 0 225.7.2rem 2.5rem 3.2rem;
     transition: 0.35s;
     cursor: pointer;
 
@@ -148,7 +185,7 @@
 
   &__post-view-btn {
     position: absolute;
-    top: 8px;
+    top: 0.8rem;
     right: 0;
     text-decoration: none;
     color: $purple;
@@ -157,8 +194,8 @@
   // Introduce
   &__introduce {
     display: flex;
-    margin-top: 151px;
-    padding: 96px 80px;
+    margin-top: 15.1rem;
+    padding: 9.6rem 8rem;
     background-color: $lavenderColor;
     position: relative;
 
@@ -169,28 +206,28 @@
     &--text {
       @include textBody1;
 
-      margin-right: 45px;
+      margin-right: 4.5rem;
     }
 
     &::after {
       position: absolute;
-      top: -23px;
+      top: -2.3rem;
       right: 0;
       content: "";
-      max-width: 285px;
+      max-width: 28.5rem;
       width: 100%;
-      height: 23px;
+      height: 2.3rem;
       background-color: $purple;
     }
 
     &::before {
       position: absolute;
-      top: -23px;
-      right: 195px;
+      top: -2.3rem;
+      right: 19.5rem;
       content: "";
-      max-width: 925px;
+      max-width: 92.5rem;
       width: 100%;
-      height: 23px;
+      height: 2.3rem;
       background-color: $yellowBg;
     }
   }
@@ -198,41 +235,51 @@
   &__about,
   &__mission {
     flex: 1;
+
+    @include respond(tablet) {
+      padding-top: 3.2rem;
+    }
   }
 
   &__about {
-    margin-right: 82px;
+    margin-right: 8.2rem;
   }
 
   &__about &__introduce--heading {
     @include heading2;
 
-    margin-right: 66px;
-    padding: 24px 0 16px 0;
+    margin-right: 6.6rem;
+    padding: 2.4rem 0 1.6rem 0;
   }
 
   &__about-btn {
-    padding-top: 17px;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 32px;
-    color: $purple;
+    @include heading5($purple);
+
+    margin-top: 1.7rem;
     text-decoration: none;
   }
 
   &__mission &__introduce--heading {
     @include heading3;
 
-    margin-right: 67px;
-    padding: 24px 0 16px 0;
+    margin-right: 6.7rem;
+    padding: 2.4rem 0 1.6rem 0;
+  }
+
+  &__about,
+  &__about &__introduce--heading,
+  &__mission &__introduce--heading {
+    @include respond(tablet) {
+      margin-right: 0;
+    }
   }
 
   // Category
   &__category {
-    padding: 128px;
+    padding: 12.8rem;
 
     &--heading {
-      padding-bottom: 48px;
+      padding-bottom: 4.8rem;
       text-align: center;
     }
   }
@@ -243,7 +290,11 @@
 
     img {
       width: 100%;
-      max-width: 949px;
+      max-width: 94.9rem;
+
+      @include respond(mobile) {
+        display: none;
+      }
     }
 
     &--sub-heading {
@@ -253,7 +304,7 @@
     &--heading {
       @include heading1;
 
-      padding: 24px 0 16px 0;
+      padding: 2.4rem 0 1.6rem 0;
     }
 
     &--text {
@@ -265,47 +316,65 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    max-width: 706px;
+    max-width: 70.6rem;
     width: 100%;
-    padding: 80px;
+    padding: 8rem;
     background-color: $whiteColor;
+
+    @include respond(mobile) {
+      position: relative;
+      padding-bottom: 0;
+    }
   }
 
   &__special-btn {
     @include buttonPrimary;
 
-    margin-top: 32px;
+    margin-top: 3.2rem;
   }
 
   // Author
   &__author {
-    padding-top: 128px;
+    padding-top: 12.8rem;
   }
 
   // Logo featured
   &__logo {
     @include dFlexCenter(space-between);
 
-    margin: 96px 0;
+    margin: 9.6rem 0;
 
     &--sub-heading {
       @include textBody2;
+
+      @include respond(tablet) {
+        @include textCap($mediumGreyColor);
+      }
     }
 
     &--heading {
       @include heading4($mediumGreyColor);
+
+      @include respond(tablet) {
+        @include heading2($mediumGreyColor);
+      }
     }
   }
 
   &__logo-img {
     img {
       color: #ccc;
+
+      @include respond(tablet) {
+        width: 100%;
+        width: 25rem;
+      }
     }
   }
 
   // Testimonial
   &__testimonial {
-    padding: 80px 112px;
+    padding: 8rem 11.2rem;
     background-color: $lightYellowColor;
 
     display: flex;
@@ -317,40 +386,63 @@
     &--heading {
       @include heading2;
 
-      padding: 12px 24px 16px 0;
+      padding: 1.2rem 2.4rem 1.6rem 0;
     }
 
     &--text {
       @include textBody1;
     }
+
+    @include respond(tablet) {
+      padding: 4.8rem;
+    }
   }
 
   &__testimonial-header {
-    padding-right: 80px;
-    border-right: 1px solid $mediumGreyColor;
+    padding-right: 8rem;
+    border-right: 0.1rem solid $mediumGreyColor;
     flex: 1;
+
+    @include respond(tablet) {
+      padding-bottom: 3.2rem;
+      border-right: none;
+      border-bottom: 0.1rem solid $mediumGreyColor;
+    }
   }
 
   &__testimonial-content {
-    padding-left: 80px;
+    padding-left: 8rem;
     position: relative;
     flex: 2;
+
+    @include respond(tablet) {
+      padding-left: 0;
+    }
   }
 
   &__testimonial-message {
     @include heading4;
 
-    padding-right: 190px;
+    padding-right: 19rem;
+
+    @include respond(tablet) {
+      padding-right: 0;
+      padding-top: 1.6rem;
+    }
   }
 
   &__testimonial-profile {
     @include dFlexCenter(flex-start);
 
-    margin-top: 121px;
+    margin-top: 12.1rem;
+
+    @include respond(tablet) {
+      padding-right: 0;
+    }
   }
 
   &__testimonial-avatar {
-    padding-right: 16px;
+    padding-right: 1.6rem;
   }
 
   &__testimonial-name {
@@ -367,7 +459,7 @@
 
   &__testimonial-control {
     display: flex;
-    gap: 24px;
+    gap: 2.4rem;
 
     position: absolute;
     right: 0;
@@ -377,8 +469,8 @@
   &__testimonial-btn {
     @include dFlexCenter;
 
-    width: 48px;
-    height: 48px;
+    width: 4.8rem;
+    height: 4.8rem;
     border: none;
     border-radius: 50%;
     background-color: $whiteColor;
@@ -403,6 +495,34 @@
 
   // Join
   &__join {
-    padding-top: 128px;
+    padding-top: 12.8rem;
+  }
+
+  // Responsive
+  &__introduce,
+  &__category {
+    @include respond(tablet) {
+      padding: 4.8rem;
+      width: 100%;
+    }
+
+    @include respond(mobile) {
+      padding: 3.2rem 1.6rem;
+      width: 100%;
+    }
+  }
+
+  &__post,
+  &__introduce,
+  &__logo,
+  &__testimonial {
+    @include respond(tablet) {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    @include respond(mobile) {
+      gap: 16px;
+    }
   }
 }

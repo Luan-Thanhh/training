@@ -2,7 +2,7 @@
   // Header
   &__header {
     margin-top: $heightHeader;
-    padding: 80px 463px;
+    padding: 8rem 46.3rem;
     background-color: $lavenderColor;
     text-align: center;
 
@@ -13,7 +13,15 @@
     &--text {
       @include textBody1;
 
-      padding: 16px 0 32px 0;
+      padding: 1.6rem 0 3.2rem 0;
+    }
+
+    @include respond(tablet) {
+      padding: 8rem 16.4rem;
+    }
+
+    @include respond(mobile) {
+      padding: 8rem;
     }
   }
 
@@ -25,7 +33,7 @@
     }
 
     li + li:before {
-      padding: 4px;
+      padding: 0.4rem;
       content: ">";
     }
 
@@ -37,9 +45,18 @@
 
   // Main
   &__main {
-    @include dFlexCenter(space-between, flex-start, 144px);
+    @include dFlexCenter(space-between, flex-start, 14.4rem);
 
-    padding: 128px 80px;
+    padding: 12.8rem 8rem;
+
+    @include respond(tablet) {
+      padding: 8rem 3.2rem;
+      flex-direction: column;
+    }
+
+    @include respond(mobile) {
+      padding: 4.8rem;
+    }
   }
 
   // List
@@ -51,7 +68,7 @@
   &__item {
     @include dFlexCenter(space-between);
 
-    padding-bottom: 32px;
+    padding-bottom: 3.2rem;
     cursor: pointer;
 
     &:last-child {
@@ -65,24 +82,33 @@
     &--heading {
       @include heading2;
 
-      padding: 20px 0 16px 0;
+      padding: 2rem 0 1.6rem 0;
     }
 
     &--text {
       @include textBody1;
     }
+
+    @include respond(mobile) {
+      flex-direction: column;
+      gap: 3.2rem;
+    }
   }
 
   &__item-img {
-    padding-right: 32px;
-    max-width: 294px;
+    padding-right: 3.2rem;
+    max-width: 29.4rem;
     width: 100%;
-    height: 312px;
+    height: 31.2rem;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    @include respond(tablet) {
+      padding-right: 0;
     }
   }
 
@@ -96,23 +122,32 @@
     &--heading {
       @include heading2;
     }
+
+    @include respond(tablet) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   // Cards
   &__card-list {
-    padding-top: 40px;
+    padding-top: 4rem;
     width: $widthSidebar;
     list-style: none;
+
+    @include respond(tablet) {
+      width: 100%;
+    }
   }
 
   &__card-item {
-    margin-bottom: 24px;
-    padding: 24px;
-    border: 1px solid $mediumGreyColor;
+    margin-bottom: 2.4rem;
+    padding: 2.4rem;
+    border: 0.1rem solid $mediumGreyColor;
     transition: 0.5s;
 
     &:last-child {
-      margin-bottom: 48px;
+      margin-bottom: 4.8rem;
     }
 
     &:hover {
@@ -122,15 +157,15 @@
   }
 
   &__card-link {
-    @include dFlexCenter(flex-start, $gap: 16px);
+    @include dFlexCenter(flex-start, $gap: 1.6rem);
 
     text-decoration: none;
   }
 
   &__card-icon {
     background-color: $lightYellowColor;
-    padding: 12px;
-    border-radius: 10px;
+    padding: 1.2rem;
+    border-radius: 1rem;
   }
 
   &__card-name {
@@ -147,25 +182,30 @@
   }
 
   &__tag-list {
-    padding-top: 32px;
-    list-style: none;
     @include dFlexCenter(space-between);
+
     flex-wrap: wrap;
+    padding-top: 3.2rem;
+    list-style: none;
+
+    @include respond(tablet) {
+      justify-content: space-around;
+    }
   }
 
   &__tag-item {
-    margin-bottom: 16px;
-    border: 1px solid $mediumGreyColor;
-    border-radius: 100px;
+    margin-bottom: 1.6rem;
+    border: 0.1rem solid $mediumGreyColor;
+    border-radius: 10rem;
   }
 
   &__tag-link {
     display: inline-block;
-    padding: 8px 38px;
+    padding: 0.8rem 3.8rem;
     color: $mediumGreyColor;
     text-decoration: none;
     font-weight: 700;
-    font-size: 14px;
-    line-height: 32px;
+    font-size: 1.4rem;
+    line-height: 3.2rem;
   }
 }
