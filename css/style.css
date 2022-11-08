@@ -719,6 +719,7 @@ body {
   line-height: 4.8rem;
   color: #232536;
   letter-spacing: -2px;
+  margin-bottom: 3.2rem;
 }
 .homepage__post--title {
   font-weight: 700;
@@ -816,7 +817,7 @@ body {
   color: #232536;
 }
 .homepage__post-item {
-  padding: 0 225.7 0.2rem 2.5rem 3.2rem;
+  padding: 3.2rem;
   transition: 0.35s;
   cursor: pointer;
 }

@@ -102,6 +102,8 @@
 
     &--heading {
       @include heading2;
+
+      margin-bottom: 3.2rem;
     }
 
     &--title {
@@ -178,7 +180,7 @@
   }
 
   &__post-item {
-    padding: 0 225.7.2rem 2.5rem 3.2rem;
+    padding: 3.2rem;
     transition: 0.35s;
     cursor: pointer;
 
