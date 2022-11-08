@@ -935,7 +935,7 @@ body {
   }
 }
 .homepage__category {
-  padding: 8rem;
+  padding: 8rem 0;
 }
 .homepage__category--heading {
   padding-bottom: 4.8rem;
