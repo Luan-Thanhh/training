@@ -171,6 +171,15 @@
     @include heading3($whiteColor);
 
     text-decoration: none;
+    text-transform: capitalize;
+
+    &:hover {
+      color: rgba($whiteColor, 0.6);
+    }
+
+    &:active {
+      color: rgba($whiteColor, 0.8);
+    }
   }
 
   &__overlay-mobile {

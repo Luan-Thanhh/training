@@ -152,7 +152,7 @@
     }
 
     @include respond(mobile) {
-      padding: 3.2rem;
+      padding: 4.8rem 3.2rem;
     }
   }
 
@@ -233,6 +233,7 @@
 
     @include respond(mobile) {
       padding: 2rem 2.8rem 0 4.3rem;
+      gap: 6.4rem;
     }
   }
 

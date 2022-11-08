@@ -42,9 +42,8 @@
       flex-direction: column;
     }
 
-    @include respond(tablet) {
+    @include respond(mobile) {
       padding: 3.2rem 7.2rem;
-      flex-direction: column;
     }
   }
 
@@ -105,6 +104,7 @@
 
     @include respond(tablet) {
       flex-direction: column;
+      padding-top: 3.2rem;
     }
   }
 

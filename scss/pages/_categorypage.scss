@@ -187,10 +187,6 @@
     flex-wrap: wrap;
     padding-top: 3.2rem;
     list-style: none;
-
-    @include respond(tablet) {
-      justify-content: space-around;
-    }
   }
 
   &__tag-item {

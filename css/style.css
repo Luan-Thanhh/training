@@ -425,6 +425,13 @@ body {
   color: #ffffff;
   letter-spacing: -1px;
   text-decoration: none;
+  text-transform: capitalize;
+}
+.navbar__item-mobile:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+.navbar__item-mobile:active {
+  color: rgba(255, 255, 255, 0.8);
 }
 .navbar__overlay-mobile {
   position: fixed;
@@ -463,6 +470,11 @@ body {
   position: relative;
   z-index: 1;
   border: none;
+}
+@media (max-width: 900px) {
+  .footer__navbar {
+    margin-bottom: -3.6rem;
+  }
 }
 .footer__form {
   display: flex;
@@ -551,6 +563,11 @@ body {
   display: flex;
   list-style: none;
   gap: 3rem;
+}
+@media (max-width: 900px) {
+  .footer__social {
+    padding-bottom: 3.2rem;
+  }
 }
 .footer__address {
   font-family: "Inter", sans-serif;
@@ -720,6 +737,11 @@ body {
   padding: 1.6rem 0 3.2rem 0;
   text-align: justify;
 }
+@media (max-width: 600px) {
+  .homepage__post--text {
+    margin-right: 0;
+  }
+}
 @media (max-width: 900px) {
   .homepage__post {
     align-items: center;
@@ -808,6 +830,11 @@ body {
   text-decoration: none;
   color: #592ea9;
 }
+@media (max-width: 600px) {
+  .homepage__post-view-btn {
+    top: 1.8rem;
+  }
+}
 .homepage__introduce {
   display: flex;
   margin-top: 15.1rem;
@@ -842,6 +869,12 @@ body {
   height: 2.3rem;
   background-color: #592ea9;
 }
+@media (max-width: 600px) {
+  .homepage__introduce::after {
+    max-width: 30%;
+    right: 0;
+  }
+}
 .homepage__introduce::before {
   position: absolute;
   top: -2.3rem;
@@ -851,6 +884,12 @@ body {
   width: 100%;
   height: 2.3rem;
   background-color: #ffd050;
+}
+@media (max-width: 600px) {
+  .homepage__introduce::before {
+    max-width: 70%;
+    left: 0;
+  }
 }
 .homepage__about, .homepage__mission {
   flex: 1;
@@ -950,6 +989,7 @@ body {
   .homepage__special-content {
     position: relative;
     padding-bottom: 0;
+    padding: 3.6rem;
   }
 }
 .homepage__special-btn {
@@ -1014,6 +1054,7 @@ body {
     line-height: 4.8rem;
     color: #6d6e76;
     letter-spacing: -2px;
+    padding-bottom: 3.2rem;
   }
 }
 .homepage__logo-img img {
@@ -1022,7 +1063,7 @@ body {
 @media (max-width: 900px) {
   .homepage__logo-img img {
     width: 100%;
-    width: 25rem;
+    width: 18rem;
   }
 }
 .homepage__testimonial {
@@ -1054,8 +1095,9 @@ body {
   line-height: 2.8rem;
   color: #6d6e76;
 }
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   .homepage__testimonial {
+    gap: 16px;
     padding: 4.8rem;
   }
 }
@@ -1103,6 +1145,7 @@ body {
 }
 @media (max-width: 900px) {
   .homepage__testimonial-profile {
+    margin-top: 6rem;
     padding-right: 0;
   }
 }
@@ -1129,6 +1172,11 @@ body {
   position: absolute;
   right: 0;
   bottom: 0;
+}
+@media (max-width: 600px) {
+  .homepage__testimonial-control {
+    flex-direction: column;
+  }
 }
 .homepage__testimonial-btn {
   display: flex;
@@ -1173,11 +1221,6 @@ body {
   .homepage__post, .homepage__introduce, .homepage__logo, .homepage__testimonial {
     flex-direction: column;
     gap: 32px;
-  }
-}
-@media (max-width: 600px) {
-  .homepage__post, .homepage__introduce, .homepage__logo, .homepage__testimonial {
-    gap: 16px;
   }
 }
 
@@ -1779,7 +1822,7 @@ body {
 }
 @media (max-width: 600px) {
   .aboutpage__overview-content {
-    padding: 3.2rem;
+    padding: 4.8rem 3.2rem;
   }
 }
 .aboutpage__overview-quantity {
@@ -1875,6 +1918,7 @@ body {
 @media (max-width: 600px) {
   .aboutpage__information-item {
     padding: 2rem 2.8rem 0 4.3rem;
+    gap: 6.4rem;
   }
 }
 .aboutpage__information-picture {
@@ -2089,11 +2133,6 @@ body {
   padding-top: 3.2rem;
   list-style: none;
 }
-@media (max-width: 900px) {
-  .categorypage__tag-list {
-    justify-content: space-around;
-  }
-}
 .categorypage__tag-item {
   margin-bottom: 1.6rem;
   border: 0.1rem solid #6d6e76;
@@ -2158,10 +2197,9 @@ body {
     flex-direction: column;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   .authorpage__header {
     padding: 3.2rem 7.2rem;
-    flex-direction: column;
   }
 }
 .authorpage__header-social a {
@@ -2222,6 +2260,7 @@ body {
 @media (max-width: 900px) {
   .authorpage__item {
     flex-direction: column;
+    padding-top: 3.2rem;
   }
 }
 .contactpage__main {
