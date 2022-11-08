@@ -164,7 +164,7 @@
     padding: 3.2rem 4.8rem;
     background-color: $yellowBg;
     position: absolute;
-    top: -17.9rem;
+    top: -17.8rem;
 
     &--heading {
       @include headingDisplay;
@@ -203,6 +203,7 @@
 
   &__information-item {
     @include dFlexCenter(space-between, $gap: 13.7rem 12.7rem);
+    padding-bottom: 3.2rem;
 
     &:nth-child(even) {
       flex-direction: row-reverse;
@@ -224,6 +225,7 @@
 
   &__information-picture {
     max-width: 62.4rem;
+    width: 100%;
 
     img {
       width: 100%;

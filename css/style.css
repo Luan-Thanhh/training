@@ -1785,7 +1785,7 @@ body {
   padding: 3.2rem 4.8rem;
   background-color: #ffd050;
   position: absolute;
-  top: -17.9rem;
+  top: -17.8rem;
 }
 .aboutpage__overview-quantity--heading {
   font-weight: 700;
@@ -1838,6 +1838,7 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 13.7rem 12.7rem;
+  padding-bottom: 3.2rem;
 }
 .aboutpage__information-item:nth-child(even) {
   flex-direction: row-reverse;
@@ -1858,6 +1859,7 @@ body {
 }
 .aboutpage__information-picture {
   max-width: 62.4rem;
+  width: 100%;
 }
 .aboutpage__information-picture img {
   width: 100%;
