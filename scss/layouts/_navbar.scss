@@ -13,7 +13,6 @@
 
   @include respond(tablet) {
     padding: 0 3.2rem;
-    border-bottom: 1px solid $whiteColor;
   }
 
   @include respond(mobile) {
@@ -36,6 +35,15 @@
 
     text-decoration: none;
     color: $whiteColor;
+    transition: 0.3s;
+
+    &:hover {
+      color: rgba($whiteColor, 0.6);
+    }
+
+    &:active {
+      color: rgba($whiteColor, 0.8);
+    }
   }
 
   &__btn {
@@ -156,7 +164,8 @@
     visibility: hidden;
     transition: 0.5s;
 
-    &.active {
+    &.show {
+      overflow-y: scroll;
       transform: translateX(0);
       opacity: 1;
       visibility: visible;
@@ -177,7 +186,7 @@
       color: rgba($whiteColor, 0.6);
     }
 
-    &:active {
+    &:show {
       color: rgba($whiteColor, 0.8);
     }
   }
@@ -195,7 +204,7 @@
     visibility: hidden;
     transition: 0.3s;
 
-    &.active {
+    &.show {
       opacity: 1;
       visibility: visible;
     }

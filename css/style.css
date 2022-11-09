@@ -177,7 +177,15 @@ body {
   line-height: 4rem;
   color: #232536;
   letter-spacing: -1px;
+  display: block;
   text-decoration: none;
+  transition: 0.3s;
+}
+.author__name a:hover {
+  color: rgba(35, 37, 54, 0.6);
+}
+.author__name a:active {
+  color: rgba(35, 37, 54, 0.8);
 }
 .author__job {
   font-family: "Inter", sans-serif;
@@ -258,7 +266,6 @@ body {
 @media (max-width: 900px) {
   .navbar {
     padding: 0 3.2rem;
-    border-bottom: 1px solid #ffffff;
   }
 }
 @media (max-width: 600px) {
@@ -287,6 +294,13 @@ body {
   color: #6d6e76;
   text-decoration: none;
   color: #ffffff;
+  transition: 0.3s;
+}
+.navbar__menu-item:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+.navbar__menu-item:active {
+  color: rgba(255, 255, 255, 0.8);
 }
 .navbar__btn {
   padding: 1.6rem 4.8rem;
@@ -408,7 +422,8 @@ body {
   visibility: hidden;
   transition: 0.5s;
 }
-.navbar__list-mobile.active {
+.navbar__list-mobile.show {
+  overflow-y: scroll;
   transform: translateX(0);
   opacity: 1;
   visibility: visible;
@@ -430,7 +445,7 @@ body {
 .navbar__item-mobile:hover {
   color: rgba(255, 255, 255, 0.6);
 }
-.navbar__item-mobile:active {
+.navbar__item-mobile:show {
   color: rgba(255, 255, 255, 0.8);
 }
 .navbar__overlay-mobile {
@@ -446,7 +461,7 @@ body {
   visibility: hidden;
   transition: 0.3s;
 }
-.navbar__overlay-mobile.active {
+.navbar__overlay-mobile.show {
   opacity: 1;
   visibility: visible;
 }
