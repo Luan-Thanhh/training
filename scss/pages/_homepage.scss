@@ -238,7 +238,7 @@
     &::before {
       position: absolute;
       top: -2.3rem;
-      right: 19.5rem;
+      left: 0;
       content: "";
       max-width: 92.5rem;
       width: 100%;
@@ -447,7 +447,7 @@
   &__testimonial-message {
     @include heading4;
 
-    padding-right: 19rem;
+    padding-right: 2rem;
 
     @include respond(tablet) {
       padding-right: 0;
