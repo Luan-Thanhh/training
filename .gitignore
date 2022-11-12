@@ -4,6 +4,8 @@ bin-release/
 [Bb]in/
 node_modules/
 .vscode/
+package-lock.json/
+package.json/
 
 # Other files and folders
 .settings/

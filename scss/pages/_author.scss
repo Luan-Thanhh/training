@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&display=swap");
+
+// Abstracts
+@import "../variables/variables";
+@import "../mixins/mixins";
+
+// Base
+@import "../base/base";
+
+// Layouts
+@import "../layouts/navbar";
+@import "../layouts/footer";
+
+.author {
+  &__header {
+    @include dFlexCenter(space-between, $gap: 3.2rem);
+
+    margin-top: $heightHeader;
+    padding: 12.8rem 20.8rem;
+    background-color: $lavenderColor;
+    position: relative;
+
+    &--heading {
+      @include heading1;
+    }
+
+    &--text {
+      @include textBody1;
+
+      padding: 2.4rem 0;
+    }
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 20.8rem;
+      content: "";
+      width: 60%;
+      height: 2.3rem;
+      background-color: $yellowBg;
+
+      @include respond(mobile) {
+        left: 0;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      right: 20.8rem;
+      bottom: 0;
+      content: "";
+      width: 20%;
+      height: 2.3rem;
+      background-color: $purple;
+
+      @include respond(mobile) {
+        width: 40%;
+        right: 0;
+      }
+    }
+
+    @include respond(tablet) {
+      padding: 6.4rem 15.4rem;
+      flex-direction: column;
+    }
+
+    @include respond(mobile) {
+      padding: 3.2rem 7.2rem;
+    }
+  }
+
+  &__header-avatar {
+  }
+
+  &__header-content {
+  }
+
+  &__header-social {
+    a {
+      text-decoration: none;
+      padding-right: 1.6rem;
+    }
+  }
+
+  // Main
+  &__main {
+    padding: 12.8rem 20.8rem;
+
+    @include respond(tablet) {
+      padding: 6.4rem 15.4rem;
+    }
+
+    @include respond(mobile) {
+      padding: 3.2rem 7.2rem;
+    }
+  }
+
+  // Post
+  &__post {
+    &--heading {
+      @include heading1;
+    }
+  }
+
+  &__list {
+  }
+
+  &__item {
+    @include dFlexCenter(space-between, $gap: 3.2rem);
+
+    padding-top: 6.4rem;
+
+    &--title {
+      @include textCap($purple);
+    }
+
+    &--heading {
+      @include heading2;
+
+      padding: 2rem 0 1.6rem 0;
+    }
+
+    &--text {
+      @include textBody1;
+    }
+
+    @include respond(tablet) {
+      flex-direction: column;
+      padding-top: 3.2rem;
+    }
+  }
+
+  &__item-img {
+    max-width: 41.2rem;
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__item-content {
+  }
+}

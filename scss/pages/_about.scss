@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&display=swap");
+
+// Abstracts
+@import "../variables/variables";
+@import "../mixins/mixins";
+
+// Base
+@import "../base/base";
+
+// Component
+@import "../components/authors";
+@import "../components/join";
+
+// Layouts
+@import "../layouts/navbar";
+@import "../layouts/footer";
+
+.about {
+  &__header {
+    @include dFlexCenter;
+
+    margin-top: $heightHeader;
+    padding: 8rem 11.8rem 0 18.9rem;
+
+    &--title {
+      @include textCap(500);
+    }
+
+    &--heading {
+      @include heading1;
+
+      padding-top: 1.6rem;
+
+      @include respond(tablet) {
+        @include heading2;
+      }
+
+      @include respond(mobile) {
+        @include heading3;
+      }
+    }
+
+    &--text {
+      @include textBody1;
+
+      padding: 0 3.2rem;
+      flex: 1;
+
+      @include respond(tablet) {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      @include respond(mobile) {
+        display: none;
+      }
+    }
+
+    @include respond(tablet) {
+      padding: 4rem 5.8rem 0 9.3rem;
+    }
+
+    @include respond(mobile) {
+      padding: 2rem 2.8rem 0 4.3rem;
+    }
+  }
+
+  &__header-desc {
+    padding: 6.4rem;
+    background-color: $whiteColor;
+    flex: 1;
+
+    @include respond(tablet) {
+      padding: 4.8rem;
+    }
+
+    @include respond(mobile) {
+      padding: 2.4rem;
+    }
+  }
+
+  // Main
+  &__main {
+    padding: 0 8rem;
+
+    @include respond(tablet) {
+      padding: 0 4.8rem;
+    }
+
+    @include respond(mobile) {
+      padding: 0 1.6rem;
+    }
+  }
+
+  // Overview
+  &__overview {
+    position: relative;
+    top: -6.4rem;
+    z-index: -1;
+
+    &--title {
+      @include textCap;
+    }
+
+    &--heading {
+      @include heading3;
+
+      padding: 2.4rem 10.8rem 1.6rem 0;
+    }
+
+    &--text {
+      @include textBody1;
+    }
+  }
+
+  &__overview-img {
+    width: 100%;
+    height: 44.4rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__overview-content {
+    @include dFlexCenter(space-between, flex-start, 3.2rem);
+
+    padding: 12.8rem 10.8rem 6.4rem;
+    background-color: $lavenderColor;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: -2.3rem;
+      content: "";
+      width: 31.1rem;
+      height: 2.3rem;
+      background-color: $purple;
+
+      @include respond(tablet) {
+        left: 0;
+        right: 0;
+        width: 100%;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      top: -2.3rem;
+      left: 33.1rem;
+      content: "";
+      width: 55rem;
+      height: 2.3rem;
+      background-color: $yellowBg;
+
+      @include respond(tablet) {
+        display: none;
+      }
+    }
+
+    @include respond(tablet) {
+      padding: 4.8rem;
+      flex-direction: column;
+    }
+
+    @include respond(mobile) {
+      padding: 4.8rem 3.2rem;
+    }
+  }
+
+  &__overview-mision {
+  }
+
+  &__overview-vision {
+  }
+
+  &__overview-quantity {
+    @include dFlexCenter(space-between, $gap: 6.8rem);
+
+    padding: 3.2rem 4.8rem;
+    background-color: $yellowBg;
+    position: absolute;
+    top: 0;
+    transform: translateY(calc(-100% - 2.2rem));
+
+    &--heading {
+      @include headingDisplay;
+
+      @include respond(mobile) {
+        @include heading1;
+      }
+    }
+
+    &--text {
+      @include textBody1;
+    }
+
+    @include respond(tablet) {
+      left: 0;
+      width: 100%;
+      gap: 3.2rem;
+    }
+
+    @include respond(mobile) {
+      gap: 1.6rem;
+    }
+  }
+
+  // Information
+  &__information {
+    margin-top: -6.4rem;
+    padding: 12.8rem 0;
+
+    &--heading {
+      @include heading2;
+    }
+
+    &--sub-heading {
+      @include heading4;
+
+      padding: 1.6rem 0;
+      padding-right: 5.2rem;
+    }
+
+    &--text {
+      @include textBody1;
+    }
+  }
+
+  &__information-item {
+    @include dFlexCenter(space-between, $gap: 13.7rem 12.7rem);
+    padding-bottom: 3.2rem;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    @include respond(tablet) {
+      &:nth-child(even) {
+        flex-direction: column;
+      }
+
+      padding: 4rem 5.8rem 0 9.3rem;
+      flex-direction: column;
+    }
+
+    @include respond(mobile) {
+      padding: 2rem 2.8rem 0 4.3rem;
+      gap: 6.4rem;
+    }
+  }
+
+  &__information-picture {
+    max-width: 62.4rem;
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  // Join
+  &__join {
+    margin: 12.8rem 0;
+  }
+}

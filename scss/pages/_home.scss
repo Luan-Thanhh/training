@@ -1,0 +1,571 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&display=swap");
+
+// Abstracts
+@import "../variables/variables";
+@import "../mixins/mixins";
+
+// Base
+@import "../base/base";
+
+// Component
+@import "../components/category";
+@import "../components/authors";
+@import "../components/join";
+
+// Layouts
+@import "../layouts/navbar";
+@import "../layouts/footer";
+
+.home {
+  // Header
+  &__header {
+    margin-top: $heightHeader;
+    height: 72rem;
+    background: center / cover no-repeat url("../img/thumbnail/banner.png");
+    background-attachment: fixed;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(
+        30.56% 76.04% at 74.58% 0%,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.6) 100%
+      );
+      background-attachment: fixed;
+    }
+
+    &--sub-heading {
+      @include textCap($whiteColor, 500);
+
+      span {
+        @include textCap($whiteColor, 900);
+      }
+    }
+
+    &--heading {
+      @include headingDisplay($whiteColor);
+
+      padding: 2.4rem 0;
+      max-width: 80.3rem;
+      width: 100%;
+
+      @include respond(tablet) {
+        @include heading1($whiteColor);
+      }
+
+      @include respond(mobile) {
+        @include heading2($whiteColor);
+      }
+    }
+
+    &--text {
+      @include textBody1($whiteColor);
+
+      padding: 1.6rem 0 4.8rem 0;
+      max-width: 60rem;
+      width: 100%;
+    }
+  }
+
+  &__header-content {
+    padding: 0 8rem;
+    position: relative;
+    top: 12.8rem;
+    z-index: 1;
+
+    @include respond(tablet) {
+      padding: 0 3.2rem;
+    }
+
+    @include respond(mobile) {
+      padding: 0 1.6rem;
+    }
+  }
+
+  &__header-author {
+    @include textBody1($whiteColor);
+
+    span {
+      color: $yellowBg;
+    }
+  }
+
+  &__header-btn {
+    @include buttonPrimary;
+  }
+
+  // Main
+  &__main {
+    padding: 13rem 8rem;
+
+    @include respond(tablet) {
+      padding: 4.8rem;
+    }
+
+    @include respond(mobile) {
+      padding: 4.8rem 1.6rem;
+    }
+  }
+
+  // Post
+  &__post {
+    display: flex;
+    gap: 3.2rem;
+    position: relative;
+
+    &--heading {
+      @include heading2;
+
+      margin-bottom: 3.2rem;
+    }
+
+    &--title {
+      @include heading3;
+    }
+
+    &--text {
+      @include textBody1;
+
+      margin-right: 11.8rem;
+      padding: 1.6rem 0 3.2rem 0;
+      text-align: justify;
+
+      @include respond(mobile) {
+        margin-right: 0;
+      }
+    }
+
+    @include respond(tablet) {
+      align-items: center;
+    }
+  }
+
+  &__post-feature {
+    max-width: 73.3rem;
+    width: 100%;
+  }
+
+  &__post-info {
+    padding: 3.2rem;
+    border: 0.1rem solid $mediumGreyColor;
+
+    @include respond(tablet) {
+      margin: 0;
+      margin-top: 3.2rem;
+    }
+
+    @include respond(tablet) {
+      margin-top: 2.4rem;
+    }
+  }
+
+  &__post-img {
+    max-width: 73.3rem;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__post-author {
+    @include textLabel;
+
+    padding: 3.2rem 0 1.6rem 0;
+
+    span {
+      color: $purple;
+    }
+  }
+
+  &__post-read-btn {
+    @include buttonPrimary;
+  }
+
+  &__post-list {
+    list-style: none;
+  }
+
+  &__post-list &__post--title {
+    @include heading4;
+  }
+
+  &__post-item {
+    padding: 3.2rem;
+    padding-top: 0;
+    transition: 0.35s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $lightYellowColor;
+    }
+  }
+
+  &__post-view-btn {
+    position: absolute;
+    top: 0.8rem;
+    right: 0;
+    text-decoration: none;
+    color: $purple;
+
+    @include respond(mobile) {
+      top: 1.8rem;
+    }
+  }
+
+  // Introduce
+  &__introduce {
+    display: flex;
+    margin-top: 15.1rem;
+    padding: 9.6rem 8rem;
+    background-color: $lavenderColor;
+    position: relative;
+
+    &--title {
+      @include textCap;
+    }
+
+    &--text {
+      @include textBody1;
+
+      margin-right: 4.5rem;
+    }
+
+    &::after {
+      position: absolute;
+      top: -2.3rem;
+      right: 0;
+      content: "";
+      max-width: 28.5rem;
+      width: 100%;
+      height: 2.3rem;
+      background-color: $purple;
+
+      @include respond(tablet) {
+        max-width: 30%;
+        right: 0;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      top: -2.3rem;
+      right: 0;
+      content: "";
+      width: 70%;
+      height: 2.3rem;
+      background-color: $yellowBg;
+
+      @include respond(tablet) {
+        max-width: 70%;
+        left: 0;
+      }
+    }
+  }
+
+  &__about,
+  &__mission {
+    flex: 1;
+
+    @include respond(tablet) {
+      padding-top: 3.2rem;
+    }
+  }
+
+  &__about {
+    margin-right: 8.2rem;
+  }
+
+  &__about &__introduce--heading {
+    @include heading2;
+
+    margin-right: 6.6rem;
+    padding: 2.4rem 0 1.6rem 0;
+  }
+
+  &__about-btn {
+    @include heading5($purple);
+
+    margin-top: 1.7rem;
+    text-decoration: none;
+  }
+
+  &__mission &__introduce--heading {
+    @include heading3;
+
+    margin-right: 6.7rem;
+    padding: 2.4rem 0 1.6rem 0;
+  }
+
+  &__about,
+  &__about &__introduce--heading,
+  &__mission &__introduce--heading {
+    @include respond(tablet) {
+      margin-right: 0;
+    }
+  }
+
+  // Category
+  &__category {
+    padding: 8rem 0;
+
+    &--heading {
+      padding-bottom: 4.8rem;
+      text-align: center;
+    }
+  }
+
+  // Special post
+  &__special {
+    position: relative;
+
+    img {
+      width: 100%;
+      max-width: 94.9rem;
+
+      @include respond(mobile) {
+        display: none;
+      }
+    }
+
+    &--sub-heading {
+      @include textCap;
+    }
+
+    &--heading {
+      @include heading1;
+
+      padding: 2.4rem 0 1.6rem 0;
+    }
+
+    &--text {
+      @include textBody1;
+    }
+  }
+
+  &__special-content {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-width: 70.6rem;
+    width: 100%;
+    padding: 8rem;
+    background-color: $whiteColor;
+
+    @include respond(mobile) {
+      position: relative;
+      padding-bottom: 0;
+      padding: 3.6rem;
+    }
+  }
+
+  &__special-btn {
+    @include buttonPrimary;
+
+    margin-top: 3.2rem;
+  }
+
+  // Author
+  &__author {
+    padding-top: 12.8rem;
+  }
+
+  // Logo featured
+  &__logo {
+    @include dFlexCenter(space-between);
+
+    margin: 9.6rem 0;
+
+    &--sub-heading {
+      @include textBody2;
+
+      @include respond(tablet) {
+        @include textCap($mediumGreyColor);
+      }
+    }
+
+    &--heading {
+      @include heading4($mediumGreyColor);
+
+      @include respond(tablet) {
+        @include heading2($mediumGreyColor);
+
+        padding-bottom: 3.2rem;
+      }
+    }
+  }
+
+  &__logo-img {
+    img {
+      color: #ccc;
+
+      @include respond(tablet) {
+        width: 100%;
+        width: 18rem;
+      }
+    }
+  }
+
+  // Testimonial
+  &__testimonial {
+    padding: 8rem 11.2rem;
+    background-color: $lightYellowColor;
+
+    display: flex;
+
+    &--sub-heading {
+      @include textCap;
+    }
+
+    &--heading {
+      @include heading2;
+
+      padding: 1.2rem 2.4rem 1.6rem 0;
+    }
+
+    &--text {
+      @include textBody1;
+    }
+
+    @include respond(mobile) {
+      gap: 16px;
+      padding: 4.8rem;
+    }
+  }
+
+  &__testimonial-header {
+    padding-right: 8rem;
+    border-right: 0.1rem solid $mediumGreyColor;
+    flex: 1;
+
+    @include respond(tablet) {
+      padding-bottom: 3.2rem;
+      border-right: none;
+      border-bottom: 0.1rem solid $mediumGreyColor;
+    }
+  }
+
+  &__testimonial-content {
+    padding-left: 8rem;
+    position: relative;
+    flex: 2;
+
+    @include respond(tablet) {
+      padding-left: 0;
+    }
+  }
+
+  &__testimonial-message {
+    @include heading4;
+
+    padding-right: 2rem;
+
+    @include respond(tablet) {
+      padding-right: 0;
+      padding-top: 1.6rem;
+    }
+  }
+
+  &__testimonial-profile {
+    @include dFlexCenter(flex-start);
+
+    margin-top: 12.1rem;
+
+    @include respond(tablet) {
+      margin-top: 6rem;
+      padding-right: 0;
+    }
+  }
+
+  &__testimonial-avatar {
+    padding-right: 1.6rem;
+  }
+
+  &__testimonial-name {
+    a {
+      @include heading4;
+
+      text-decoration: none;
+    }
+  }
+
+  &__testimonial-address {
+    @include textBody1;
+  }
+
+  &__testimonial-control {
+    display: flex;
+    gap: 2.4rem;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    @include respond(mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__testimonial-btn {
+    @include dFlexCenter;
+
+    width: 4.8rem;
+    height: 4.8rem;
+    border: none;
+    border-radius: 50%;
+    background-color: $whiteColor;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $darkBg;
+      transform: scale(1.2);
+
+      img {
+        filter: invert(195%) sepia(176%) saturate(6849%) hue-rotate(-55deg)
+          brightness(202%) contrast(250%);
+      }
+    }
+
+    &:active {
+      transform: scale(1);
+    }
+  }
+
+  // Join
+  &__join {
+    padding-top: 12.8rem;
+  }
+
+  // Responsive
+  &__introduce,
+  &__category {
+    @include respond(tablet) {
+      padding: 4.8rem;
+      width: 100%;
+    }
+
+    @include respond(mobile) {
+      padding: 3.2rem 1.6rem;
+      width: 100%;
+    }
+  }
+
+  &__post,
+  &__introduce,
+  &__logo,
+  &__testimonial {
+    @include respond(tablet) {
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+}

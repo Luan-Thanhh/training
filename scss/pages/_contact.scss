@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&display=swap");
+
+// Abstracts
+@import "../variables/variables";
+@import "../mixins/mixins";
+
+// Base
+@import "../base/base";
+
+// Layouts
+@import "../layouts/navbar";
+@import "../layouts/footer";
+
+.contact {
+  &__main {
+    padding: 12.8rem 33.6rem;
+
+    @include respond(tablet) {
+      margin-top: $heightHeader;
+      padding: 6.8rem 16.9rem;
+    }
+
+    @include respond(tablet) {
+      padding: 2.4rem;
+    }
+  }
+
+  &__content {
+    text-align: center;
+
+    &--title {
+      @include textCap($bold: 900);
+    }
+
+    &--heading {
+      @include heading1;
+
+      padding: 1.2rem 0 2.4rem 0;
+    }
+
+    &--text {
+      @include textBody1;
+    }
+  }
+
+  &__information {
+    @include dFlexCenter(space-between, flex-start, 4.2rem);
+
+    margin: 6.4rem 0 3.2rem 0;
+    padding: 4.8rem 6.4rem;
+    background-color: $purple;
+
+    &--title {
+      @include textBody2($whiteColor);
+
+      padding-bottom: 1.6rem;
+      border-bottom: 0.1rem solid $whiteColor;
+      opacity: 0.6;
+    }
+
+    &--heading {
+      @include heading5($whiteColor);
+
+      padding-top: 1.6rem;
+    }
+
+    &--text {
+      @include textBody2($whiteColor);
+
+      opacity: 0.6;
+    }
+  }
+
+  &__information-working {
+    flex: 1;
+  }
+
+  &__information-contact {
+    flex: 1;
+  }
+
+  &__form {
+  }
+
+  &__form-group {
+    padding-bottom: 1.6rem;
+
+    textarea {
+      resize: vertical;
+    }
+  }
+
+  &__form-control {
+    @include textBody1;
+
+    width: 100%;
+    padding: 2.4rem;
+    border: 0.1rem solid $mediumGreyColor;
+    background-color: transparent;
+  }
+
+  &__form-btn {
+    @include buttonPrimary;
+
+    width: 100%;
+  }
+}
