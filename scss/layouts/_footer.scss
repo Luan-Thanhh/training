@@ -52,15 +52,15 @@
   &__form-control {
     @include textBody1($whiteColor);
 
+    margin-right: 24px;
     padding: 1.3rem 2.5rem;
     border: 0.1rem solid $mediumGreyColor;
     background-color: transparent;
     outline: none;
-    max-width: 32.3rem;
-    width: 100%;
 
     @include respond(tablet) {
-      max-width: 100%;
+      margin: 0;
+      width: 100%;
     }
   }
 

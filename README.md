@@ -1,6 +1,6 @@
 # Finsweet
 
-- [Home page](https://luan-thanhh.github.io/finsweet/homepage)
+- [Home page](https://luan-thanhh.github.io/finsweet)
 - [Blog page](https://luan-thanhh.github.io/finsweet/blogpage)
 - [Blog post page](https://luan-thanhh.github.io/finsweet/postpage)
 - [About us page](https://luan-thanhh.github.io/finsweet/aboutpage)

@@ -440,16 +440,16 @@ body {
   font-size: 1.6rem;
   line-height: 2.8rem;
   color: #ffffff;
+  margin-right: 24px;
   padding: 1.3rem 2.5rem;
   border: 0.1rem solid #6d6e76;
   background-color: transparent;
   outline: none;
-  max-width: 32.3rem;
-  width: 100%;
 }
 @media (max-width: 900px) {
   .footer__form-control {
-    max-width: 100%;
+    margin: 0;
+    width: 100%;
   }
 }
 .footer__form-submit {
